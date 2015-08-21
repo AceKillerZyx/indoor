@@ -43,7 +43,7 @@ public class PayModeActivity extends BasicActivity {
     private String amount = "";
     
     private String ordernumber = "";
-    
+    private String nam;
 	// 支付方式
 	private TextView PayModeAlipayTextView, PayModeWeChatTextView,PayModeBankTextView;
 
