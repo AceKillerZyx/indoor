@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <com.indoorsy.frash.common.view.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </com.indoorsy.frash.common.view.CustomTitleView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/SeckillNavLeft"
+            style="@style/commonText"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/homepage_gray_press"
+            android:gravity="center"
+            android:padding="@dimen/homepage_padding_5"
+            android:textColor="@color/homepage_gray_text"
+            android:textSize="@dimen/homepage_textsize_14" />
+
+        <TextView
+            android:id="@+id/SeckillNavMid"
+            style="@style/commonText"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:padding="@dimen/homepage_padding_5"
+            android:textColor="@color/homepage_red_seckill"
+            android:textSize="@dimen/homepage_textsize_14" />
+
+        <TextView
+            android:id="@+id/SeckillNavRight"
+            style="@style/commonText"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/homepage_gray_press"
+            android:gravity="center"
+            android:padding="@dimen/homepage_padding_5"
+            android:textColor="@color/homepage_gray_text"
+            android:textSize="@dimen/homepage_textsize_14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/SeckillCountDownTimerLinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_splitline_lightgray"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/commonText"
+            android:padding="@dimen/homepage_padding_5"
+            android:text="本场倒计时："
+            android:textColor="@color/homepage_red_seckill"
+            android:textSize="@dimen/homepage_textsize_14" />
+        <com.indoorsy.frash.common.view.RushBuyCountDownTimerView
+            android:id="@+id/SeckillTimerView"
+            style="@style/commonText" >
+        </com.indoorsy.frash.common.view.RushBuyCountDownTimerView>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/SeckillListView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/common_splitline_lightgray"
+        android:dividerHeight="3dp" >
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:padding="@dimen/common_margin_8" >
+
+    <LinearLayout
+        android:id="@+id/SuccessLinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/common_margin_8" >
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/homepage_pay_success" />
+
+        <TextView
+            android:id="@+id/TotalPointTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="支付成功"
+            android:textStyle="bold"
+            android:textColor="@color/homepage_green_money"
+            android:textSize="35sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/BackButton"
+        style="@style/commonButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SuccessLinearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/common_margin_8"
+        android:background="@drawable/common_button_selector"
+        android:padding="@dimen/common_margin_8"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:text="返回商品列表"
+        android:textSize="@dimen/homepage_textsize_16" />
+
+</RelativeLayout>

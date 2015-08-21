@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/OutLineLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="2dp" >
+
+    <RelativeLayout
+        android:id="@+id/personalManageAddressShouhuoRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white" >
+
+        <RelativeLayout
+            android:id="@+id/personalMnageAddress1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/personalManageAddressUpdateAddressImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/personal_manage_editor" />
+
+            <TextView
+                android:id="@+id/personalAddressTextView"
+                style="@style/commonText"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/personal_manageaddress"
+                android:gravity="center"
+                android:text="@string/personal_manageaddress"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/personalMnageAddress2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/personalMnageAddress1"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/personalConsigneeTextView"
+                style="@style/commonText"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="@string/personal_address_receipname"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+
+            <TextView
+                android:id="@+id/personalConsigneeNameTextView"
+                style="@style/commonText"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/personalConsigneeTextView"
+                android:gravity="center"
+                android:text="@string/personal_address_receipname"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+
+            <TextView
+                android:id="@+id/personalConsigneePhoneTextView"
+                style="@style/commonText"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/personalConsigneeNameTextView"
+                android:gravity="center"
+                android:text="10086"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/personalMnageAddress3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/personalMnageAddress2"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/personalAddress2TextView"
+                style="@style/commonText"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="@string/personal_address_receipaddress2"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+
+            <TextView
+                android:id="@+id/personalAddressValueTextView"
+                style="@style/commonText"
+                android:layout_marginLeft="5dp"
+                android:layout_toLeftOf="@+id/personalDefaultAddressTextView"
+                android:layout_toRightOf="@id/personalAddress2TextView"
+                android:gravity="left"
+                android:text="山西太原dkalsjfkldasjklfjdalksjfkljksaldjfklasjd"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+
+            <TextView
+                android:id="@+id/personalDefaultAddressTextView"
+                style="@style/commonText"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@color/homepage_green_money"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="默认收货地址"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/personal_fragment_text_size12"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

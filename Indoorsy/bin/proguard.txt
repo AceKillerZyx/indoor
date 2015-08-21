@@ -1,0 +1,288 @@
+# view res/layout/homepage_content_layout.xml #generated:250
+# view res/layout/homepage_product_detail.xml #generated:37
+# view res/layout/indoorsy_chat.xml #generated:278
+# view res/layout/indoorsy_guide.xml #generated:7
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
+# view res/layout/smssdk_contact_list_page.xml #generated:13
+-keep class cn.smssdk.gui.ContactsListView { <init>(...); }
+
+# view res/layout/smssdk_country_list_page.xml #generated:13
+-keep class cn.smssdk.gui.CountryListView { <init>(...); }
+
+# view AndroidManifest.xml #generated:270
+-keep class com.alipay.sdk.app.H5PayActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:276
+-keep class com.alipay.sdk.auth.AuthActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:339
+-keep class com.baidu.android.pushservice.CommandService { <init>(...); }
+
+# view AndroidManifest.xml #generated:331
+-keep class com.baidu.android.pushservice.PushService { <init>(...); }
+
+# view AndroidManifest.xml #generated:302
+-keep class com.baidu.android.pushservice.PushServiceReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:317
+-keep class com.baidu.android.pushservice.RegistrationReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:236
+-keep class com.baidu.location.f { <init>(...); }
+
+# view AndroidManifest.xml #generated:263
+-keep class com.easemob.chat.EMChatService { <init>(...); }
+
+# view AndroidManifest.xml #generated:253
+-keep class com.easemob.chat.StartServiceReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:129
+-keep class com.indoorsy.frash.commodity.activity.FirmOrderActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:133
+-keep class com.indoorsy.frash.commodity.activity.PayModeActivity { <init>(...); }
+
+# view res/layout/homepage_content_layout.xml #generated:313
+# view res/layout/homepage_content_layout.xml #generated:359
+# view res/layout/homepage_content_layout.xml #generated:405
+# view res/layout/homepage_product_detail_comment_item.xml #generated:8
+# view res/layout/homepage_recipe_detail_comment_item.xml #generated:8
+# view res/layout/myinfo_login.xml #generated:28
+# view res/layout/personal_fragment.xml #generated:30
+# view res/layout/personal_mymembers.xml #generated:25
+# view res/layout/personal_updatepersonal.xml #generated:25
+-keep class com.indoorsy.frash.common.view.CircleImageView { <init>(...); }
+
+# view res/layout/common_lockup.xml #generated:2
+-keep class com.indoorsy.frash.common.view.CommonLockUpView { <init>(...); }
+
+# view res/layout/commodity_firm_order.xml #generated:8
+# view res/layout/commodity_fragment.xml #generated:10
+# view res/layout/homepage_imgdetail.xml #generated:8
+# view res/layout/homepage_product_detail.xml #generated:8
+# view res/layout/homepage_product_more_comment.xml #generated:8
+# view res/layout/homepage_productlist_activity.xml #generated:8
+# view res/layout/homepage_recipe_detail.xml #generated:8
+# view res/layout/homepage_recipe_more_comment.xml #generated:8
+# view res/layout/homepage_recipe_share.xml #generated:7
+# view res/layout/homepage_seckill.xml #generated:8
+# view res/layout/homepage_titlebar_search.xml #generated:8
+# view res/layout/indoorsy_chat.xml #generated:8
+# view res/layout/myinfo_login.xml #generated:7
+# view res/layout/myinfo_register.xml #generated:7
+# view res/layout/myinfo_register_term.xml #generated:7
+# view res/layout/myinfo_retrieve_password.xml #generated:6
+# view res/layout/myinfo_updatepassword.xml #generated:8
+# view res/layout/order_details.xml #generated:8
+# view res/layout/personal_aboutus.xml #generated:7
+# view res/layout/personal_addaddress.xml #generated:7
+# view res/layout/personal_checkupdate.xml #generated:9
+# view res/layout/personal_clean.xml #generated:8
+# view res/layout/personal_comment.xml #generated:7
+# view res/layout/personal_deal_details.xml #generated:7
+# view res/layout/personal_evaluation.xml #generated:8
+# view res/layout/personal_feedback.xml #generated:7
+# view res/layout/personal_fragment.xml #generated:8
+# view res/layout/personal_integralrecord.xml #generated:8
+# view res/layout/personal_invitefriends.xml #generated:7
+# view res/layout/personal_manageaddress.xml #generated:7
+# view res/layout/personal_mycollection.xml #generated:8
+# view res/layout/personal_mymembers.xml #generated:8
+# view res/layout/personal_myorder.xml #generated:8
+# view res/layout/personal_payhelp.xml #generated:7
+# view res/layout/personal_updatepersonal.xml #generated:8
+# view res/layout/shopping_cart_fragment.xml #generated:8
+-keep class com.indoorsy.frash.common.view.CustomTitleView { <init>(...); }
+
+# view res/layout/homepage_recipe_detail.xml #generated:86
+-keep class com.indoorsy.frash.common.view.GridViewForScrollView { <init>(...); }
+
+# view res/layout/commodity_firm_order.xml #generated:194
+# view res/layout/homepage_content_layout.xml #generated:441
+# view res/layout/homepage_product_detail.xml #generated:353
+# view res/layout/homepage_recipe_detail.xml #generated:100
+# view res/layout/homepage_recipe_detail.xml #generated:147
+# view res/layout/shopping_cart_fragment.xml #generated:53
+-keep class com.indoorsy.frash.common.view.ListViewForScrollView { <init>(...); }
+
+# view res/layout/homepage_fragment.xml #generated:71
+-keep class com.indoorsy.frash.common.view.PullScrollView { <init>(...); }
+
+# view res/layout/homepage_seckill.xml #generated:68
+-keep class com.indoorsy.frash.common.view.RushBuyCountDownTimerView { <init>(...); }
+
+# view res/layout/commodity_fragment.xml #generated:15
+# view res/layout/homepage_productlist_activity.xml #generated:13
+-keep class com.indoorsy.frash.common.view.expandtab.ExpandTabView { <init>(...); }
+
+# view res/layout/common_view_timepicker.xml #generated:13
+# view res/layout/common_view_timepicker.xml #generated:19
+# view res/layout/common_view_timepicker.xml #generated:25
+# view res/layout/common_view_timepicker.xml #generated:31
+# view res/layout/common_view_timepicker.xml #generated:7
+-keep class com.indoorsy.frash.common.view.pickdate.WheelView { <init>(...); }
+
+# view AndroidManifest.xml #generated:246
+-keep class com.indoorsy.frash.easemob.activity.ChatActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:243
+-keep class com.indoorsy.frash.easemob.activity.KfLoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:249
+-keep class com.indoorsy.frash.easemob.activity.ShowBigImage { <init>(...); }
+
+# view res/layout/row_received_picture.xml #generated:39
+# view res/layout/row_sent_picture.xml #generated:44
+# view res/layout/row_sent_picture.xml #generated:95
+-keep class com.indoorsy.frash.easemob.widget.BubbleImageView { <init>(...); }
+
+# view res/layout/expression_gridview.xml #generated:7
+-keep class com.indoorsy.frash.easemob.widget.ExpandGridView { <init>(...); }
+
+# view res/layout/indoorsy_chat.xml #generated:64
+-keep class com.indoorsy.frash.easemob.widget.PasteEditText { <init>(...); }
+
+# view res/layout/activity_show_big_image.xml #generated:8
+-keep class com.indoorsy.frash.easemob.widget.photoview.PhotoView { <init>(...); }
+
+# view AndroidManifest.xml #generated:99
+-keep class com.indoorsy.frash.home.activity.IndoorsyActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:75
+-keep class com.indoorsy.frash.home.activity.IndoorsyApplication { <init>(...); }
+
+# view AndroidManifest.xml #generated:96
+-keep class com.indoorsy.frash.home.activity.IndoorsyGuideActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:87
+-keep class com.indoorsy.frash.home.activity.IndoorsyWelcomeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:290
+-keep class com.indoorsy.frash.home.receiver.MyPushMessageReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:105
+-keep class com.indoorsy.frash.homepage.activity.HomePageSearchActivtiy { <init>(...); }
+
+# view AndroidManifest.xml #generated:146
+-keep class com.indoorsy.frash.homepage.activity.IMGDetail { <init>(...); }
+
+# view AndroidManifest.xml #generated:109
+-keep class com.indoorsy.frash.homepage.activity.ProductDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:113
+-keep class com.indoorsy.frash.homepage.activity.ProductListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:220
+-keep class com.indoorsy.frash.homepage.activity.ProductListActivity2 { <init>(...); }
+
+# view AndroidManifest.xml #generated:142
+-keep class com.indoorsy.frash.homepage.activity.ProductMoreComment { <init>(...); }
+
+# view AndroidManifest.xml #generated:121
+-keep class com.indoorsy.frash.homepage.activity.RecipeDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:150
+-keep class com.indoorsy.frash.homepage.activity.RecipeMoreComment { <init>(...); }
+
+# view AndroidManifest.xml #generated:125
+-keep class com.indoorsy.frash.homepage.activity.RecipeShareActivtiy { <init>(...); }
+
+# view AndroidManifest.xml #generated:117
+-keep class com.indoorsy.frash.homepage.activity.SeckillActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:138
+-keep class com.indoorsy.frash.homepage.activity.ShareActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:156
+-keep class com.indoorsy.frash.myinfo.activity.LoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:160
+-keep class com.indoorsy.frash.myinfo.activity.RegisterActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:163
+-keep class com.indoorsy.frash.myinfo.activity.RetrievePasswordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:166
+-keep class com.indoorsy.frash.myinfo.activity.TermActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:169
+-keep class com.indoorsy.frash.myinfo.activity.UpdatePasswordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:198
+-keep class com.indoorsy.frash.personal.activity.AboutUSActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:213
+-keep class com.indoorsy.frash.personal.activity.AddAddressActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:195
+-keep class com.indoorsy.frash.personal.activity.CheckUpdateActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:201
+-keep class com.indoorsy.frash.personal.activity.CleanActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:189
+-keep class com.indoorsy.frash.personal.activity.ContactUsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:216
+-keep class com.indoorsy.frash.personal.activity.EvaluationActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:192
+-keep class com.indoorsy.frash.personal.activity.FeedBackActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:204
+-keep class com.indoorsy.frash.personal.activity.IntegralRecordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:210
+-keep class com.indoorsy.frash.personal.activity.ManageAddressActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:183
+-keep class com.indoorsy.frash.personal.activity.MyCollectionActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:180
+-keep class com.indoorsy.frash.personal.activity.MyMenberActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:174
+-keep class com.indoorsy.frash.personal.activity.MyOrderActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:177
+-keep class com.indoorsy.frash.personal.activity.OrderDetailsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:186
+-keep class com.indoorsy.frash.personal.activity.PayHelpActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:207
+-keep class com.indoorsy.frash.personal.activity.UpdatePersonalActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:230
+-keep class com.indoorsy.frash.wxapi.WXEntryActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:224
+-keep class com.mob.tools.MobUIShell { <init>(...); }
+
+# view AndroidManifest.xml #generated:265
+-keep class com.pingplusplus.android.PaymentActivity { <init>(...); }
+
+# view res/layout/smssdk_contacts_listview_item.xml #generated:10
+-keep class m.framework.ui.widget.asyncview.AsyncImageView { <init>(...); }
+
+# onClick res/layout/smssdk_regist_page.xml #generated:98
+-keepclassmembers class * { *** BtnNext(...); }
+
+# onClick res/layout/indoorsy_chat.xml #generated:64
+-keepclassmembers class * { *** editClick(...); }
+
+# onClick res/layout/indoorsy_chat.xml #generated:106
+-keepclassmembers class * { *** more(...); }
+
+# onClick res/layout/indoorsy_chat.xml #generated:34
+-keepclassmembers class * { *** more_new(...); }
+
+# onClick res/layout/indoorsy_chat.xml #generated:115
+# onClick res/layout/indoorsy_chat.xml #generated:313
+# onClick res/layout/indoorsy_chat.xml #generated:344
+-keepclassmembers class * { *** onClick(...); }
+
+# onClick res/layout/indoorsy_chat.xml #generated:43
+-keepclassmembers class * { *** setModeKeyboard(...); }
+

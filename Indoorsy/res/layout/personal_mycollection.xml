@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_splitline_lightgray"
+    android:orientation="vertical" >
+
+    <com.indoorsy.frash.common.view.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/mycollectionCollectionbabyLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="#ececec"
+            android:padding="@dimen/common_padding" >
+
+            <TextView
+                style="@style/commonText"
+                android:text="@string/personal_mycollection_collectionbaby"
+                android:textColor="@color/personal_fragment_text_color" />
+
+            <View
+                android:id="@+id/mycollectionCollectionbabyView"
+                android:layout_width="@dimen/personal_mycollection_view_width"
+                android:layout_height="@dimen/personal_mycollection_view_height"
+                android:layout_marginTop="@dimen/personal_mycollection_view_margin_top"
+                android:background="@drawable/homepage_viewpager_item_dot_select" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="fill_parent"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:id="@+id/mycollectionCollectionrecipeLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+             android:background="#ececec"
+            android:padding="@dimen/common_padding" >
+
+            <TextView
+                style="@style/commonText"
+                android:text="@string/personal_mycollection_collectionrecipe"
+                android:textColor="@color/personal_fragment_text_color" />
+
+            <View
+                android:id="@+id/mycollectionCollectionrecipeView"
+                android:layout_width="@dimen/personal_mycollection_view_width"
+                android:layout_height="@dimen/personal_mycollection_view_height"
+                android:layout_marginTop="@dimen/personal_mycollection_view_margin_top"
+                android:background="@drawable/homepage_viewpager_item_dot_normal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/commonGreyLineView"
+        android:background="@color/gray" />
+    <ListView 
+        android:id="@+id/mycollectionListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+        android:divider="@color/gray"
+        android:dividerHeight="0.5dp"
+        android:visibility="gone"/>
+    <GridView
+        android:id="@+id/mycollectionGridView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="@dimen/homepage_margin_5" 
+       android:visibility="gone"/>
+
+</LinearLayout>

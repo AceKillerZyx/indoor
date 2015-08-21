@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/common_margin_8" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/common_margin_8" >
+
+        <TextView
+            android:id="@+id/TotalPointTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/homepage_point"
+            android:textColor="@color/homepage_black_text"
+            android:textSize="@dimen/homepage_textsize_16" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/UsePointEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_splitline_lightgray"
+        android:hint="使用积分"
+        android:inputType="numberDecimal"
+        android:padding="@dimen/common_margin_8" />
+
+    <Button
+        android:id="@+id/UsePointButton"
+        style="@style/commonButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin_8"
+        android:background="@drawable/common_button_selector"
+        android:paddingBottom="@dimen/common_margin_8"
+        android:paddingTop="@dimen/common_margin_8"
+        android:text="使用积分"
+        android:textSize="@dimen/homepage_textsize_16" />
+
+</LinearLayout>

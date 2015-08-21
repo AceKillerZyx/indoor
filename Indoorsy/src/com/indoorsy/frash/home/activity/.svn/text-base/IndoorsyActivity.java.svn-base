@@ -1,0 +1,348 @@
+package com.indoorsy.frash.home.activity;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
+
+import android.annotation.SuppressLint;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.RadioButton;
+import android.widget.Toast;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.baidu.location.BDLocation;
+import com.baidu.location.BDLocationListener;
+import com.baidu.location.LocationClient;
+import com.baidu.location.LocationClientOption;
+import com.baidu.location.LocationClientOption.LocationMode;
+import com.baidu.mapapi.SDKInitializer;
+import com.indoorsy.frash.Constants;
+import com.indoorsy.frash.R;
+import com.indoorsy.frash.fragment.CommodityFragment;
+import com.indoorsy.frash.fragment.HomepageFragment;
+import com.indoorsy.frash.fragment.PersonalFragment;
+import com.indoorsy.frash.fragment.ShoppingCartFragment;
+import com.indoorsy.frash.util.SharedPreferencesUtil;
+
+
+public class IndoorsyActivity  extends FragmentActivity implements OnClickListener {
+	
+	private static final String TAG = IndoorsyActivity.class.getSimpleName();
+
+	private int i = 0;
+
+	private int current_fg = 1;
+	
+	private boolean isReceiver = false;
+
+	private static FragmentManager fragmentManager;
+
+	private Fragment homePageFragment, commodityFragment, shoppingCartFragment,
+			personalFragment;
+
+	private RadioButton homePageRadioButton, homeCommodityRadioButton,
+			homeShoppingCartRadioButton, homePersonalRadioButton;
+	
+	
+	// 百度定位
+	private LocationMode tempMode = LocationMode.Hight_Accuracy;
+	private String tempcoor = "gcj02";
+	private int frequence = 1000 * 60 * 60; // 定位自动刷新平率
+	private Double lat, lon;
+	private String address, address_province, address_city, address_code;
+	public static final int FLAG = 1;
+	private LocationClient mLocationClient;
+	public MyLocationListener mMyLocationListener;
+		
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		SDKInitializer.initialize(getApplicationContext());
+		super.onCreate(savedInstanceState);
+		//百度定位初始化
+		mLocationClient = new LocationClient(this.getApplicationContext());
+		mMyLocationListener = new MyLocationListener();
+		mLocationClient.registerLocationListener(mMyLocationListener);
+		initLocation();
+		mLocationClient.start();
+		Log.i(TAG, "=========开始定位=========");
+		setContentView(R.layout.indoorsy_home);
+		fragmentManager = getSupportFragmentManager(); // 获取FragmentManager实例
+		init(); // 初始化页面
+		
+		
+	}
+
+	private void init() {
+		homePageRadioButton = (RadioButton) findViewById(R.id.homePageRadioButton);
+		homePageRadioButton.setOnClickListener(this);
+		homeCommodityRadioButton = (RadioButton) findViewById(R.id.homeCommodityRadioButton);
+		homeCommodityRadioButton.setOnClickListener(this);
+		homeShoppingCartRadioButton = (RadioButton) findViewById(R.id.homeShoppingCartRadioButton);
+		homeShoppingCartRadioButton.setOnClickListener(this);
+		homePersonalRadioButton = (RadioButton) findViewById(R.id.homePersonalRadioButton);
+		homePersonalRadioButton.setOnClickListener(this);
+		homePageFragment = new HomepageFragment();
+		commodityFragment = new CommodityFragment();
+		shoppingCartFragment = new ShoppingCartFragment();
+		personalFragment = new PersonalFragment();
+		// 初始化第一个页面
+		changeFrament(homePageFragment, null, "homePageFragment");
+		homePageRadioButton.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.home_homepage_tab_pressed2, 0, 0);
+		homePageRadioButton.setTextColor(getResources().getColor(R.color.common_title_bg));
+	}
+	
+	public void initLocation() {
+		LocationClientOption option = new LocationClientOption();
+		option.setLocationMode(tempMode);
+		option.setCoorType(tempcoor);
+		option.setScanSpan(frequence);
+		option.setIsNeedAddress(true);
+		mLocationClient.setLocOption(option);
+	}
+
+	// 切界面
+	public void changeFrament(Fragment fragment, Bundle bundle, String tag) {
+		for (int i = 0, count = fragmentManager.getBackStackEntryCount(); i < count; i++) {
+			fragmentManager.popBackStack();
+		}
+		FragmentTransaction fg = fragmentManager.beginTransaction();
+		fragment.setArguments(bundle);
+		fg.add(R.id.fragmentRootLinearLayout, fragment, tag);
+		fg.addToBackStack(tag);
+		fg.commitAllowingStateLoss();
+
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.homePageRadioButton:
+			if (current_fg != 1) {
+				homePageFragment = new HomepageFragment();
+				changeFrament(homePageFragment, null, "homePageFragment");
+				changeRadioButtonImage(v.getId());
+				current_fg = 1;
+			}
+			break;
+		case R.id.homeCommodityRadioButton:
+			if (current_fg != 2) {
+				commodityFragment = new CommodityFragment();
+				changeFrament(commodityFragment, null, "commodityFragment");
+				changeRadioButtonImage(v.getId());
+				current_fg = 2;
+			}
+			break;
+		case R.id.homeShoppingCartRadioButton:
+			if (current_fg != 3) {
+				shoppingCartFragment = new ShoppingCartFragment();
+				changeFrament(shoppingCartFragment, null,
+						"shoppingCartFragment");
+				changeRadioButtonImage(v.getId());
+				current_fg = 3;
+			}
+			break;
+		case R.id.homePersonalRadioButton:
+			if (current_fg != 4) {
+				personalFragment = new PersonalFragment();
+				changeFrament(personalFragment, null, "personalFragment");
+				changeRadioButtonImage(v.getId());
+				current_fg = 4;
+			}
+			break;
+		}
+	}
+
+	/*
+	 * 更换RadioButton图片
+	 */
+	public void changeRadioButtonImage(int btids) {
+		int[] imageh = { R.drawable.home_homepage_tab_normal2,
+				R.drawable.home_commodity_tab_normal2,
+				R.drawable.home_shopping_cart_tab_normal2,
+				R.drawable.home_personal_tab_normal2 };
+		int[] imagel = { R.drawable.home_homepage_tab_pressed2,
+				R.drawable.home_commodity_tab_pressed2,
+				R.drawable.home_shopping_cart_tab_pressed2,
+				R.drawable.home_personal_tab_pressed2 };
+		int[] rabt = { R.id.homePageRadioButton,
+				R.id.homeCommodityRadioButton,
+				R.id.homeShoppingCartRadioButton,
+				R.id.homePersonalRadioButton };
+		switch (btids) {
+		case R.id.homePageRadioButton:
+			changeImage(imageh, imagel, rabt, 0);
+			break;
+		case R.id.homeCommodityRadioButton:
+			changeImage(imageh, imagel, rabt, 1);
+			break;
+		case R.id.homeShoppingCartRadioButton:
+			changeImage(imageh, imagel, rabt, 2);
+			break;
+		case R.id.homePersonalRadioButton:
+			changeImage(imageh, imagel, rabt, 3);
+			break;
+		}
+	}
+
+	/*
+	 * 改变图片
+	 */
+	public void changeImage(int[] image1, int[] image2, int[] rabtid, int index) {
+		for (int i = 0; i < image1.length; i++) {
+			if (i != index) {
+				((RadioButton) findViewById(rabtid[i]))
+						.setCompoundDrawablesWithIntrinsicBounds(0, image1[i],
+								0, 0);
+				((RadioButton) findViewById(rabtid[i])).setTextColor(getResources().getColor(R.color.common_text));
+			} else {
+				((RadioButton) findViewById(rabtid[i]))
+						.setCompoundDrawablesWithIntrinsicBounds(0, image2[i],
+								0, 0);
+				((RadioButton) findViewById(rabtid[i])).setTextColor(getResources().getColor(R.color.common_title_bg));
+			}
+		}
+	}
+	
+	protected BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {  
+        @Override  
+        public void onReceive(Context context, Intent intent) {
+            finish();  
+        }  
+    };  
+    
+    @Override
+	protected void onResume() {
+    	super.onResume();
+    	// 在当前的activity中注册广播  
+        IntentFilter filter = new IntentFilter();  
+        filter.addAction(Constants.EXIT_LOGIN);  
+        isReceiver = true;
+        this.registerReceiver(this.broadcastReceiver, filter);
+    };
+    
+    @Override
+    protected void onDestroy() {
+    	super.onDestroy();
+    	if(isReceiver){
+    		this.unregisterReceiver(this.broadcastReceiver);
+    	}
+    }
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			if (i == 0) {
+				Toast.makeText(this, "再点击一次将退出程序", Toast.LENGTH_SHORT).show();
+				i++;
+			} else {
+				this.finish();
+			}
+			return false;
+		}
+		return super.onKeyDown(keyCode, event);
+	}
+	
+	public class MyLocationListener implements BDLocationListener {
+		@Override
+		public void onReceiveLocation(BDLocation location) {
+			lat = location.getLatitude();
+			lon = location.getLongitude();
+			Log.e("定位结果坐标：", " 纬度 = "+lat + "\n经度 = " + lon);
+			SharedPreferencesUtil.putString(getApplicationContext(), SharedPreferencesUtil.USER_INFO_FILE_NAME,
+					SharedPreferencesUtil.USER_INFO_KEY_LOCATION_LAT, lat+"");
+			SharedPreferencesUtil.putString(getApplicationContext(), SharedPreferencesUtil.USER_INFO_FILE_NAME,
+					SharedPreferencesUtil.USER_INFO_KEY_LOCATION_LNG, lon+"");
+			baiduAutoLocation();
+		}
+	}
+	
+	public void baiduAutoLocation() {
+		// 省份-城市-城市代码
+		new AsyncTask<String, Void, Void>() {
+			StringBuilder builder = new StringBuilder(100000);
+
+			@Override
+			protected Void doInBackground(String... params) {
+				try {
+					URL url = new URL(params[0]);
+					URLConnection connection = url.openConnection();
+					InputStream is = connection.getInputStream();
+					InputStreamReader isr = new InputStreamReader(is, "utf-8");
+					BufferedReader br = new BufferedReader(isr);
+					String line;
+					while ((line = br.readLine()) != null) {
+						builder.append(line);
+					}
+
+					JSONObject jo = JSON.parseObject(builder.toString());
+					JSONObject result = jo.getJSONObject("result");
+					address_code = result.getString("cityCode");
+					address = result.getString("formatted_address");
+					JSONObject addressComponent = result
+							.getJSONObject("addressComponent");
+					address_province = addressComponent.getString("province");
+					address_city = addressComponent.getString("city");
+//					address_city = address_city.replace("市", "");
+					
+					if (jo != null) {
+						Message msg = new Message();
+						msg.what = FLAG;
+						mHandler.sendMessage(msg);
+					}
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				return null;
+			}
+		}.execute("http://api.map.baidu.com/geocoder/v2/?ak=" 
+				+ Constants.BAIDU_AK + "&location="
+				+ lat
+				+ ","
+				+ lon
+				+ "&output=json&pois=1&mcode=" + Constants.ANDROID_SHA1 
+				+ ";"+ Constants.PACKAGE_NAME);
+	}
+	
+	@SuppressLint("HandlerLeak")
+	private Handler mHandler = new Handler() {
+		@Override
+		public void handleMessage(Message msg) {
+			switch (msg.what) {
+			case FLAG:
+				Log.e("省份：", address_province);
+				Log.e("城市：", address_city);
+				Log.e("城市代码：", address_code);
+				Log.e(TAG,"地址：" + address);
+				SharedPreferencesUtil.putString(getApplicationContext(), SharedPreferencesUtil.USER_INFO_FILE_NAME,
+						SharedPreferencesUtil.USER_INFO_KEY_LOCATION_PROVINCE, address_province);
+				SharedPreferencesUtil.putString(getApplicationContext(), SharedPreferencesUtil.USER_INFO_FILE_NAME,
+						SharedPreferencesUtil.USER_INFO_KEY_LOCATION_CITY, address_city);
+				SharedPreferencesUtil.putString(getApplicationContext(), SharedPreferencesUtil.USER_INFO_FILE_NAME,
+						SharedPreferencesUtil.USER_INFO_KEY_LOCATION_ADDRESS, address);
+				
+				break;
+			}
+		}
+	};
+	
+
+}

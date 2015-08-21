@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.indoorsy.frash.common.view.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/common_padding" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/common_edit_linearlayout_height"
+            android:background="@drawable/myinfo_linearlayout_solidcolor"
+            android:gravity="center_vertical" >
+
+            <EditText
+                android:id="@+id/registerPhoneEditText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/myingo_register_inputphone_hint"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:textColorHint="@color/myinfo_grey_text"
+                android:textSize="@dimen/common_edit_hint_text_size" >
+
+                <requestFocus />
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/common_edit_linearlayout_height"
+            android:background="@drawable/myinfo_linearlayout_solidcolor"
+            android:gravity="center_vertical" >
+
+            <EditText
+                android:id="@+id/registerCodeEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@null"
+                android:hint="@string/myingo_register_inputcode_hint"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColorHint="@color/myinfo_grey_text"
+                android:textSize="@dimen/common_edit_hint_text_size" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/registerSendCodeTextView"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/myinfo_button_selector"
+                android:gravity="center"
+                android:text="@string/myinfo_register_send_code"
+                android:textColor="@color/myinfo_register_send_code_text"
+                android:textSize="@dimen/myinfo_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/common_edit_linearlayout_height"
+            android:background="@drawable/myinfo_linearlayout_solidcolor"
+            android:gravity="center_vertical" >
+
+            <EditText
+                android:id="@+id/registerInvitationEditText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/myingo_register_invitation_hint"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColorHint="@color/myinfo_grey_text"
+                android:textSize="@dimen/common_edit_hint_text_size" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/common_edit_linearlayout_height"
+            android:background="@drawable/myinfo_linearlayout_solidcolor"
+            android:gravity="center_vertical" >
+
+            <EditText
+                android:id="@+id/registerPasswordEditText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/myingo_register_inputpwd_hint"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColorHint="@color/myinfo_grey_text"
+                android:textSize="@dimen/common_edit_hint_text_size" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/common_edit_linearlayout_height"
+            android:background="@drawable/myinfo_linearlayout_solidcolor"
+            android:gravity="center_vertical" >
+
+            <EditText
+                android:id="@+id/registerConfirmPasswordEditText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/myingo_register_inputnpwd_hint"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColorHint="@color/myinfo_grey_text"
+                android:textSize="@dimen/common_edit_hint_text_size" >
+            </EditText>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/registerButton"
+            style="@style/commonButton"
+            android:layout_marginTop="@dimen/myinfo_login_button_margin_top"
+            android:text="@string/myinfo_register" />
+
+        <LinearLayout
+            style="@style/commonText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                style="@style/commonText"
+                android:text="@string/myinfo_register_terms"
+                android:textColor="@color/common_text"
+                android:textSize="@dimen/myinfo_register_term_text_size" />
+
+            <TextView
+                android:id="@+id/registerTermTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/myinfo_register_term"
+                android:textColor="@color/myinfo_register_term"
+                android:textSize="@dimen/myinfo_register_term_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/common_lockup" />
+
+</LinearLayout>

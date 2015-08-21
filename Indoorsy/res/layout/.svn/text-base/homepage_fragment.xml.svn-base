@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_lockup" />
+
+    <RelativeLayout
+        android:id="@+id/customTitleRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_title_bg" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/home_homepage"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/common_title_text_size"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            style="@style/commonText"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/homepage_margin_10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                style="@style/commonText"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/homepage_titlebar_location" />
+
+            <LinearLayout
+                style="@style/commonText"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/HomepageTitlebarProvinceTextView"
+                    style="@style/commonText"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/homepage_textsize_12" />
+
+                <TextView
+                    android:id="@+id/HomepageTitlebarCityTextView"
+                    style="@style/commonText"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/homepage_textsize_12" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/HomePageTitleBarSearchTextView"
+            style="@style/commonText"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/homepage_margin_10"
+            android:background="@drawable/homepage_titlebar_search_bg"
+            android:drawableStart="@drawable/homepage_titlebar_search"
+            android:gravity="center_vertical|left"
+            android:text="我想买的商品"
+            android:textColor="@color/common_title_bg"
+            android:textSize="@dimen/homepage_textsize_14" />
+    </RelativeLayout>
+
+    <com.indoorsy.frash.common.view.PullScrollView
+        android:id="@+id/HomePagePullToRefreshView"
+        android:layout_below="@id/customTitleRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:fadingEdge="vertical"
+        android:scrollbars="none">
+    </com.indoorsy.frash.common.view.PullScrollView>
+
+</RelativeLayout>

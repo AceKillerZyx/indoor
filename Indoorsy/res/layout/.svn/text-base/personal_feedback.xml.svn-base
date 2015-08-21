@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <com.indoorsy.frash.common.view.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    
+    <EditText
+        android:id="@+id/personalFeedbackEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin_8"
+        android:background="@drawable/heart_item_layout_bg"
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+        android:lines="7"
+        android:padding="5dp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_height_45"
+        android:background="@drawable/heart_item_layout_bg"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/common_margin_8"
+        android:layout_marginRight="@dimen/common_margin_8"
+        android:padding="5dp" >
+
+        <TextView
+            style="@style/commonText"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:text="@string/personal_feedback_phone"
+            android:textColor="@color/common_text"/>
+
+        <EditText
+            android:id="@+id/personalFeedbackPhoneEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/personalFeedbackButton"
+        style="@style/commonButton"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="@dimen/common_margin_8"
+        android:layout_marginRight="@dimen/common_margin_8"
+        android:text="@string/personal_feedback_submit" />
+    
+    
+</LinearLayout>

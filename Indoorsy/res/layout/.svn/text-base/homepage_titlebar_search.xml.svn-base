@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white" >
+
+    <com.indoorsy.frash.common.view.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/SearchRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/customTitleView"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/homepage_search_bg" >
+
+        <EditText
+            android:id="@+id/SearchEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:hint="输入商品/分类"
+            android:padding="@dimen/common_margin_8"
+            android:textColor="@color/homepage_black_text"
+            android:textSize="@dimen/homepage_textsize_14" />
+
+        <ImageButton
+            android:id="@+id/SearchImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/SearchEditText"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/homepage_search_bg2"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@drawable/homepage_titlebar_search" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/SearchListView"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/SearchRelativeLayout"
+        android:divider="@color/common_splitline_lightgray"
+        android:dividerHeight="1dp"
+        android:listSelector="@android:color/transparent"
+        android:padding="@dimen/homepage_padding_8"
+        android:scrollbars="none" >
+    </ListView>
+
+</RelativeLayout>

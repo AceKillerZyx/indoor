@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/GridItemTextView"
+        style="@style/commonText"
+        android:padding="@dimen/common_margin_3"
+        android:textColor="@color/common_text"
+        android:textSize="@dimen/homepage_textsize_14" />
+
+</LinearLayout>

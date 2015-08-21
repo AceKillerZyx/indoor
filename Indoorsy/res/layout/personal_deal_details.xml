@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.indoorsy.frash.common.view.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/myinfo_linearlayout_solidcolor"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/myinfo_linearlayout_solidcolor"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/commonText"
+                android:drawableLeft="@drawable/personal_deal_details"
+                android:gravity="center"
+                android:text="@string/personal_deal_state"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+
+            <TextView
+                android:id="@+id/personalDealDetailsTextView"
+                style="@style/commonText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="已发货"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/myinfo_linearlayout_solidcolor"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/commonText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/personal_deal_ordernumber"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+
+            <TextView
+                android:id="@+id/personalOrderNumberTextView"
+                style="@style/commonText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="135465"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/myinfo_linearlayout_solidcolor"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/commonText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/personal_deal_orderncount"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+
+            <TextView
+                android:id="@+id/personalOrderCountTextView"
+                style="@style/commonText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="99"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/myinfo_linearlayout_solidcolor"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/commonText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/personal_deal_ordernmoney"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+
+            <TextView
+                android:id="@+id/personalOrderMoneyTextView"
+                style="@style/commonText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="99"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/myinfo_linearlayout_solidcolor"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/commonText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/personal_deal_ordernfreight"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+
+            <TextView
+                android:id="@+id/personalOrderFreightTextView"
+                style="@style/commonText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="99"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp" >
+
+            <TextView
+                style="@style/commonText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/personal_deal_oktime"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+
+            <TextView
+                android:id="@+id/personalOkTimeTextView"
+                style="@style/commonText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="99"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/personalDealDetailsRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/myinfo_linearlayout_solidcolor" >
+
+        <RelativeLayout
+            android:id="@+id/personalDealDetails1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/personalDealDetailsAddressImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/personal_manage_editor" />
+
+            <TextView
+                android:id="@+id/personalDealDetailsAddressTextView"
+                style="@style/commonText"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/personal_manageaddress"
+                android:gravity="center"
+                android:text="@string/personal_manageaddress"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/personalDealDetailsAddress2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/personalDealDetails1"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/personalDealDetailsConsigneeTextView"
+                style="@style/commonText"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="@string/personal_address_receipname"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+
+            <TextView
+                android:id="@+id/personalConsigneeNameTextView"
+                style="@style/commonText"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/personalDealDetailsConsigneeTextView"
+                android:gravity="center"
+                android:text="@string/personal_address_receipname"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+
+            <TextView
+                android:id="@+id/personalDealDetailsConsigneePhoneTextView"
+                style="@style/commonText"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/personalConsigneeNameTextView"
+                android:gravity="center"
+                android:text="10086"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/personalMnageAddress3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/personalDealDetailsAddress2"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/personalDealDetailsAddress2TextView"
+                style="@style/commonText"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="@string/personal_address_receipaddress2"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+
+            <TextView
+                android:id="@+id/personalDealDetailsAddressValueTextView"
+                style="@style/commonText"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/personalDealDetailsAddress2TextView"
+                android:gravity="center"
+                android:text="山西太原"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/persinalRefundTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="申请退款" 
+                android:background="@android:color/darker_gray"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" 
+            android:gravity="center">
+            <TextView
+                android:id="@+id/persinalServiceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="客服"
+                android:drawableRight="@drawable/personal_server"
+                android:background="@color/common_title_bg" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+            <TextView
+                android:id="@+id/persinalOkTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="确认收货" 
+                android:background="@color/personal_deal_ok"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <LinearLayout
+        android:id="@+id/fragmentRootLinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:id="@+id/homeLinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#ECECEC"
+         >
+
+        <LinearLayout style="@style/oq_home_bottom_item" >
+            <RadioButton
+                android:id="@+id/homePageRadioButton"
+                style="@style/oq_home_bottom_radio_button"
+                android:drawableTop="@drawable/home_homepage_tab_normal2"
+                android:padding="@dimen/home_radiobutton_padding"
+                android:text="@string/home_homepage"
+                android:textSize="@dimen/homepage_textsize_14" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/oq_home_bottom_item" >
+
+            <RadioButton
+                android:id="@+id/homeCommodityRadioButton"
+                style="@style/oq_home_bottom_radio_button"
+                android:drawableTop="@drawable/home_commodity_tab_normal2"
+                android:padding="@dimen/home_radiobutton_padding"
+                android:text="@string/home_commodity"
+                android:textSize="@dimen/homepage_textsize_14" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/oq_home_bottom_item" >
+
+            <RadioButton
+                android:id="@+id/homeShoppingCartRadioButton"
+                style="@style/oq_home_bottom_radio_button"
+                android:drawableTop="@drawable/home_shopping_cart_tab_normal2"
+                android:padding="@dimen/home_radiobutton_padding"
+                android:text="@string/home_shopping_cart"
+                android:textSize="@dimen/homepage_textsize_14" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/oq_home_bottom_item" >
+
+            <RadioButton
+                android:id="@+id/homePersonalRadioButton"
+                style="@style/oq_home_bottom_radio_button"
+                android:drawableTop="@drawable/home_personal_tab_normal2"
+                android:padding="@dimen/home_radiobutton_padding"
+                android:text="@string/home_personal"
+                android:textSize="@dimen/homepage_textsize_14" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/commonGreyLineView"
+        android:layout_above="@id/homeLinearLayout" />
+
+</RelativeLayout>

@@ -1,0 +1,196 @@
+package com.indoorsy.frash.util;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+
+/**
+ * SharedPreferences帮助类
+ * 
+ */
+public class SharedPreferencesUtil {
+
+	public static final String APP_INFO_FILE_NAME = "app_info"; // app相关信息文件
+
+	public static final String APP_INFO_IS_FIRST_IN = "is_first_in"; // app是否第一次进入应用
+
+	public static final String USER_INFO_FILE_NAME = "user_info"; // 用户相关信息文件
+
+	public static final String USER_INFO_KEY_ULOGINID = "uloginid"; // 用户登录ID
+
+	public static final String USER_INFO_KEY_USID = "usid"; // 用户ID
+	
+	public static final String USER_INFO_KEY_LOCATION_LAT = "lat"; // 定位纬度
+	public static final String USER_INFO_KEY_LOCATION_LNG = "lng"; // 定位经度
+	public static final String USER_INFO_KEY_LOCATION_PROVINCE = "province"; // 定位省份
+	public static final String USER_INFO_KEY_LOCATION_CITY = "city"; // 定位城市
+	public static final String USER_INFO_KEY_LOCATION_ADDRESS = "address"; // 定位街道地址
+
+	public static final String USER_INFO_KEY_HEADER_IMAGE = "header_image"; // 用户头像
+
+	public static final String USER_INFO_KEY_USNAME = "us_name"; // 用户名称
+
+	public static final String USER_INFO_KEY_PASSWORD = "us_password"; //用户密码
+
+	public static final String USER_INFO_KEY_IS_THIRD_LOGIN = "is_third_login"; //判断是否是第三方登录
+
+	public static final String USER_INFO_KEY_OPENID = "openid"; //第三方登录ID
+	
+	public static final String USER_INFO_KEY_DEAULT_ADDRESS_ID = "default_address_id"; //默认收货地址id
+	public static final String USER_INFO_KEY_DEAULT_ADDRESS_NAME = "default_address_name"; //默认收货人
+	public static final String USER_INFO_KEY_DEAULT_ADDRESS_TEL = "default_address_tel"; //默认收货电话
+	public static final String USER_INFO_KEY_DEAULT_ADDRESS_ADDRESS = "default_address_address"; //默认收货地址
+	
+	// 判断是否第一次进入应用
+	public static boolean isFirstIn(Context context) {
+		return getBooleanValue(context, APP_INFO_FILE_NAME,APP_INFO_IS_FIRST_IN);
+	}
+	
+	// 判断是否是第三方登录
+	public static boolean isThirdLogin(Context context) {
+		return getBooleanValue(context, USER_INFO_FILE_NAME,USER_INFO_KEY_IS_THIRD_LOGIN);
+	}
+
+	// 获取用户USID
+	public static int getUsid(Context context) {
+		return getIntValue(context, USER_INFO_FILE_NAME,USER_INFO_KEY_USID);
+	}
+
+	// 获取普通登录ID
+	public static int getUloginid(Context context) {
+		return getIntValue(context, USER_INFO_FILE_NAME, USER_INFO_KEY_ULOGINID);
+	}
+
+	// 获取OPENID
+	public static String getOpenId(Context context) {
+		return getStringValue(context, USER_INFO_FILE_NAME,USER_INFO_KEY_OPENID);
+	}
+
+	// 获取用户名
+	public static String getUsName(Context context) {
+		return getStringValue(context, USER_INFO_FILE_NAME,USER_INFO_KEY_USNAME);
+	}
+	
+	// 获取用户密码
+	public static String getUsPassword(Context context) {
+		return getStringValue(context, USER_INFO_FILE_NAME,USER_INFO_KEY_PASSWORD);
+	}
+	
+	// 获取用户头像
+	public static String getHeaderImage(Context context) {
+		return getStringValue(context, USER_INFO_FILE_NAME,USER_INFO_KEY_HEADER_IMAGE);
+	}
+	
+	// 获取定位 省份
+	public static String getLocationProvince(Context context) {
+		return getStringValue(context, USER_INFO_FILE_NAME,USER_INFO_KEY_LOCATION_PROVINCE);
+	}
+	
+	// 获取定位 城市
+	public static String getLocationCity(Context context) {
+		return getStringValue(context, USER_INFO_FILE_NAME,USER_INFO_KEY_LOCATION_CITY);
+	}
+	
+	// 获取定位 地址
+	public static String getLocationAddress(Context context) {
+		return getStringValue(context, USER_INFO_FILE_NAME,USER_INFO_KEY_LOCATION_ADDRESS);
+	}
+	
+	// 获取定位 纬度
+	public static String getLocationLat(Context context) {
+		return getStringValue(context, USER_INFO_FILE_NAME,USER_INFO_KEY_LOCATION_LAT);
+	}
+	
+	// 获取定位 经度
+	public static String getLocationLng(Context context) {
+		return getStringValue(context, USER_INFO_FILE_NAME,USER_INFO_KEY_LOCATION_LNG);
+	}
+	
+	// 获取 默认收货地址id
+	public static String getDefaultAddressId(Context context) {
+		return getStringValue(context, USER_INFO_FILE_NAME,USER_INFO_KEY_DEAULT_ADDRESS_ID);
+	}
+	
+	// 获取 默认收货人
+	public static String getDefaultAddressName(Context context) {
+		return getStringValue(context, USER_INFO_FILE_NAME,USER_INFO_KEY_DEAULT_ADDRESS_NAME);
+	}
+	
+	// 获取 默认收货人手机
+	public static String getDefaultAddressTel(Context context) {
+		return getStringValue(context, USER_INFO_FILE_NAME,USER_INFO_KEY_DEAULT_ADDRESS_TEL);
+	}
+	
+	// 获取 默认收货地址
+	public static String getDefaultAddressAddress(Context context) {
+		return getStringValue(context, USER_INFO_FILE_NAME,USER_INFO_KEY_DEAULT_ADDRESS_ADDRESS);
+	}
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void putString(Context context, String fileName, String key,String value) {
+		SharedPreferences.Editor editor = context.getSharedPreferences(fileName, Context.MODE_PRIVATE).edit();
+		editor.putString(key, value);
+		editor.commit();
+	}
+
+	public static void putInt(Context context, String fileName, String key,int value) {
+		SharedPreferences.Editor editor = context.getSharedPreferences(fileName, Context.MODE_PRIVATE).edit();
+		editor.putInt(key, value);
+		editor.commit();
+	}
+
+	public static void putFloat(Context context, String fileName, String key,float value) {
+		SharedPreferences.Editor editor = context.getSharedPreferences(fileName, Context.MODE_PRIVATE).edit();
+		editor.putFloat(key, value);
+		editor.commit();
+	}
+
+	public static void putLong(Context context, String fileName, String key,long value) {
+		SharedPreferences.Editor editor = context.getSharedPreferences(fileName, Context.MODE_PRIVATE).edit();
+		editor.putLong(key, value);
+		editor.commit();
+	}
+
+	public static void putBoolean(Context context, String fileName, String key,boolean value) {
+		SharedPreferences.Editor editor = context.getSharedPreferences(fileName, Context.MODE_PRIVATE).edit();
+		editor.putBoolean(key, value);
+		editor.commit();
+	}
+
+	public static String getStringValue(Context context, String fileName,String key) {
+		return context.getSharedPreferences(fileName, Context.MODE_PRIVATE).getString(key, StringUtil.EMPTY);
+	}
+
+	public static int getIntValue(Context context, String fileName, String key) {
+		return context.getSharedPreferences(fileName, Context.MODE_PRIVATE).getInt(key, 0);
+	}
+
+	public static float getFloatValue(Context context, String fileName,String key) {
+		return context.getSharedPreferences(fileName, Context.MODE_PRIVATE).getFloat(key, 0);
+	}
+
+	public static long getLongValue(Context context, String fileName, String key) {
+		return context.getSharedPreferences(fileName, Context.MODE_PRIVATE).getLong(key, 0);
+	}
+
+	public static boolean getBooleanValue(Context context, String fileName,String key) {
+		return context.getSharedPreferences(fileName, Context.MODE_PRIVATE).getBoolean(key, true);
+	}
+
+	public static void emptyFile(Context context, String fileName) {
+		context.getSharedPreferences(fileName, Context.MODE_PRIVATE).edit().clear().commit();
+	}
+
+}

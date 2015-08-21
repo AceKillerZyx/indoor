@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="@dimen/homepage_padding_5" >
+
+    <ImageView
+        android:id="@+id/HomePageListImageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/homepage_margin_5"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/HomePageListNameTextView"
+            style="@style/commonText"
+            android:layout_marginTop="@dimen/homepage_margin_10"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="新鲜黄瓜"
+            android:textColor="#404040"
+            android:textSize="@dimen/homepage_textsize_14" />
+
+        <TextView
+            android:id="@+id/HomePageListInfoTextView"
+            style="@style/commonText"
+            android:layout_marginTop="@dimen/homepage_margin_10"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="新鲜黄瓜本地进口蔬菜，会计师打开了附近的萨拉丁积分卡绿豆沙离开教室打翻了看见爱上了课 "
+            android:textColor="@color/homepage_gray_text"
+            android:textSize="@dimen/homepage_textsize_12" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/homepage_margin_5" >
+
+            <TextView
+                android:id="@+id/HomePageListMoneyTextView"
+                style="@style/commonText"
+                android:text="19.2"
+                android:textColor="@color/homepage_green_money"
+                android:textSize="@dimen/homepage_textsize_20" />
+
+            <TextView
+                android:id="@+id/HomePageListWeighTextView"
+                style="@style/commonText"
+                android:layout_alignBaseline="@+id/HomePageListMoneyTextView"
+                android:layout_alignBottom="@+id/HomePageListMoneyTextView"
+                android:layout_toRightOf="@+id/HomePageListMoneyTextView"
+                android:text="元/斤"
+                android:textColor="@color/homepage_gray_text"
+                android:textSize="@dimen/homepage_textsize_12" />
+
+            <TextView
+                android:id="@+id/HomePageListNowPriceTextView"
+                style="@style/commonText"
+                android:layout_alignBaseline="@+id/HomePageListMoneyTextView"
+                android:layout_alignBottom="@+id/HomePageListMoneyTextView"
+                android:layout_toRightOf="@+id/HomePageListWeighTextView"
+                android:text="(时价)"
+                android:textColor="@color/homepage_gray_text"
+                android:textSize="@dimen/homepage_textsize_12" 
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/HomePageListSaleNumTextView"
+                style="@style/commonText"
+                android:layout_alignBaseline="@+id/HomePageListWeighTextView"
+                android:layout_alignBottom="@+id/HomePageListWeighTextView"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/common_margin_5"
+                android:text="已售12321312"
+                android:textColor="#5E5E5E"
+                android:textSize="@dimen/homepage_textsize_12" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

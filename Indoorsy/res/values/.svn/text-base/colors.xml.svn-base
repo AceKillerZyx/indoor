@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- COMMON -->
+	<color name="common_bg">#FFFFFF</color>
+	<color name="common_text">#666666</color>
+	<color name="common_line_grey">#BBBABA</color>
+	<color name="common_bottom_bg">#E5E5E5</color>
+	<color name="common_title_bg">#6cbd1e</color>
+	<color name="common_lockup_bg">#50000000</color>
+	<color name="common_splitline_lightgray">#F8F8F8</color>
+	
+	<color name="homepage_nav_press">#D8D8D8</color>
+	 
+	<color name="gray">#ECECEC</color>
+	<color name="choose_eara_item_press_color">#f4f4f4</color>
+	<color name="personal_refund_clicked">#C2C2C2</color>
+	
+	<!-- MYINFO-LOGIN -->
+	<color name="myinfo_grey_text">#BBBABA</color>
+	<!-- MYINFO-REGISTER -->
+	<color name="myinfo_register_send_code_text">#9FCB8A</color>
+	<color name="myinfo_register_term">#73AAFC</color>
+           
+   <!-- PERSONAL-DEAL-DETAILS -->
+	<color name="personal_deal_ok">#E87435</color>
+    <!-- Homepage -->
+    <color name="homepage_newonline">#FF9800</color>
+    <color name="homepage_seckill">#22BCAA</color>
+    <color name="homepage_recipes">#677FFF</color>
+    <color name="homepage_gray_text">#B8B8B8</color>
+    <color name="homepage_green_money">#6CBC1E</color>
+    <color name="homepage_gray_press">#ECECEC</color>
+    <color name="homepage_red_seckill">#FF6363</color>
+    <color name="homepage_black_text">#303030</color>
+    <color name="homepage_nav_text">#646464</color>
+    
+    <!-- PERSONAL-FRAGMENT -->
+    <color name="personal_fragment_loginout">#FF5858</color>
+    <color name="personal_fragment_text_color">#303030</color>
+    
+    <!-- THIRD-LOGIN -->
+    <color name="dialog_white_bg">#fbfbfb</color>
+    <color name="page_back">#fff2f2f2</color>
+    <color name="logo_text_color">#ff7f7f7f</color>
+    <color name="white">#ffffffff</color>
+    <color name="login_with_other_plat_text_color">#ff383838</color>
+    
+    <!-- 时间选择框颜色 -->
+    <color name="trans">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="actionsheet_red">#FD4A2E</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+    
+
+</resources>

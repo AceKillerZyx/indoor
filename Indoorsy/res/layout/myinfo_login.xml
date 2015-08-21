@@ -1,0 +1,213 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.indoorsy.frash.common.view.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/customTitleView" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:padding="@dimen/myinfo_login_image_padding" >
+
+                <com.indoorsy.frash.common.view.CircleImageView
+                    android:id="@+id/circleImageView1"
+                    android:layout_width="@dimen/myinfo_login_image_width"
+                    android:layout_height="@dimen/myinfo_login_image_height"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/logo"
+                    android:contentDescription="@string/app_name" />
+
+                <ImageView
+                    android:id="@+id/myinfoUserLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    android:id="@+id/thirdName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/circleImageView1"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/common_edit_linearlayout_height"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/myinfo_linearlayout_solidcolor"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    style="@style/commonText"
+                    android:gravity="center_vertical" />
+
+                <EditText
+                    android:id="@+id/myinfoLoginUserNameEditText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/myinfo_login_name_logo"
+                    android:hint="@string/myingo_login_name_hint"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColorHint="@color/myinfo_grey_text"
+                    android:textSize="@dimen/common_edit_hint_text_size" >
+
+                    <requestFocus />
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/common_edit_linearlayout_height"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/myinfo_linearlayout_solidcolor"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    style="@style/commonText"
+                    android:gravity="center_vertical" />
+
+                <EditText
+                    android:id="@+id/myinfoLoginPasswordEditText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/myinfo_login_pwd_logo"
+                    android:hint="@string/myingo_login_pwd_hint"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColorHint="@color/myinfo_grey_text"
+                    android:textSize="@dimen/common_edit_hint_text_size" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/myinfoLoginButton"
+                style="@style/commonButton"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="@dimen/myinfo_login_button_margin_top"
+                android:text="@string/myinfo_login" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp" >
+
+                <TextView
+                    android:id="@+id/myinfoLoginRegisterTextView"
+                    style="@style/commonText"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/myinfo_newuser_register"
+                    android:textColor="@color/common_text"
+                    android:textSize="@dimen/myinfo_text_size" />
+
+                <TextView
+                    android:id="@+id/myinfoLoginProblemTextView"
+                    style="@style/commonText"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/myinfo_login_question_register"
+                    android:textColor="@color/common_text"
+                    android:textSize="@dimen/myinfo_text_size" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/myinfo_login_three_linearlayout_margin_top"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <View
+                        style="@style/commonGreyLineView"
+                        android:layout_width="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        style="@style/commonText"
+                        android:text="@string/myinfo_loginbydisanfang_login"
+                        android:textColor="@color/common_text"
+                        android:textSize="@dimen/myinfo_text_size" />
+
+                    <View
+                        style="@style/commonGreyLineView"
+                        android:layout_width="0dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="@dimen/myinfo_login_three_linearlayout_margin_top"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/myinfoLoginQQTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/myinfo_login_qq"
+                        android:gravity="center"
+                        android:text="@string/myinfo_login_sina"
+                        android:textColor="@color/myinfo_grey_text"
+                        android:textSize="@dimen/myinfo_login_three_text_size" />
+
+                    <TextView
+                        android:id="@+id/myinfoLoginWeiBoTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/myinfo_login_weixin_margin_text"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/myinfo_login_weibo"
+                        android:gravity="center"
+                        android:text="@string/myinfo_login_weibo"
+                        android:textColor="@color/myinfo_grey_text"
+                        android:textSize="@dimen/myinfo_login_three_text_size" />
+
+                    <TextView
+                        android:id="@+id/myinfoLoginWeiXinTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/myinfo_login_weixin_margin_text"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/myinfo_login_weixin"
+                        android:gravity="center"
+                        android:text="@string/myinfo_login_weixin"
+                        android:textColor="@color/myinfo_grey_text"
+                        android:textSize="@dimen/myinfo_login_three_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/common_lockup" />
+
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+
+    <com.indoorsy.frash.common.view.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/myinfo_linearlayout_solidcolor2"
+        android:gravity="center_vertical" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center" >
+
+            <com.indoorsy.frash.common.view.CircleImageView
+                android:id="@+id/profileHeaderCircleImageView"
+                android:layout_width="@dimen/personal_profile_image_width"
+                android:layout_height="@dimen/personal_profile_image_height"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/myinfo_image_outside"
+                android:contentDescription="@string/app_name" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/personalMymembersNameTextView"
+            style="@style/commonText"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/myinfo_login"
+            android:textColor="@color/personal_fragment_text_color"
+            android:textSize="@dimen/personal_fragment_text_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/myinfo_linearlayout_solidcolor2"
+        android:gravity="center_vertical" >
+
+        <TextView
+            style="@style/commonText"
+            android:layout_alignParentLeft="true"
+            android:text="@string/personal_mymember_memberlevel"
+            android:textColor="@color/personal_fragment_text_color"
+            android:textSize="@dimen/personal_fragment_text_size" />
+
+        <TextView
+            android:id="@+id/personalMymembersLevelvalueTextView"
+            style="@style/commonText"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/personal_fragment_text_color"
+            android:textSize="@dimen/personal_fragment_text_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/myinfo_linearlayout_solidcolor2"
+        android:gravity="center_vertical" >
+
+        <TextView
+            style="@style/commonText"
+            android:layout_alignParentLeft="true"
+            android:text="@string/personal_mymember_myorder"
+            android:textColor="@color/personal_fragment_text_color"
+            android:textSize="@dimen/personal_fragment_text_size" />
+
+        <TextView
+            android:id="@+id/personalMyMemberOrderTextView"
+            style="@style/commonText"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/personal_fragment_text_color"
+            android:textSize="@dimen/personal_fragment_text_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/personalMymemberIntegralrecordRelativelLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/myinfo_linearlayout_solidcolor2"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/personal_mymember_go" />
+
+        <TextView
+            style="@style/commonText"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/personal_mymember_integralrecord"
+            android:textColor="@color/personal_fragment_text_color"
+            android:textSize="@dimen/personal_fragment_text_size" />
+    </RelativeLayout>
+
+</LinearLayout>

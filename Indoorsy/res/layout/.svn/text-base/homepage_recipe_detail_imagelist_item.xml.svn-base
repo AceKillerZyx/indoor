@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/commonText"
+        android:layout_width="match_parent"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/RecipeDetailImageListImageView"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/homepage_product_detail_default" />
+
+        <TextView
+            android:id="@+id/RecipeDetailImageListTextView"
+            style="@style/homepageProductDeatailInfoText"
+            android:layout_width="fill_parent"
+            android:padding="@dimen/homepage_padding_8"
+            android:text="斯卡拉挤我撒" />
+
+    </LinearLayout>
+
+</LinearLayout>

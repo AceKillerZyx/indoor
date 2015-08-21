@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.indoorsy.frash.common.view.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_edit_linearlayout_height"
+        android:background="@drawable/myinfo_linearlayout_solidcolor"
+        android:gravity="center_vertical" >
+
+        <EditText
+            android:id="@+id/personalReceipNametEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/personal_address_receipname"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textColorHint="@color/myinfo_grey_text"
+            android:textSize="@dimen/common_edit_hint_text_size" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_edit_linearlayout_height"
+        android:background="@drawable/myinfo_linearlayout_solidcolor"
+        android:gravity="center_vertical" >
+
+        <EditText
+            android:id="@+id/personalReceipPhonetEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/personal_address_receiphone"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:textColorHint="@color/myinfo_grey_text"
+            android:textSize="@dimen/common_edit_hint_text_size" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_edit_linearlayout_height"
+        android:background="@drawable/myinfo_linearlayout_solidcolor"
+        android:gravity="center_vertical" >
+
+        <EditText
+            android:id="@+id/personalReceipAddressEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/personal_address_receipaddress"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textColorHint="@color/myinfo_grey_text"
+            android:textSize="@dimen/common_edit_hint_text_size" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/personalOkButton"
+        style="@style/commonButton"
+        android:layout_margin="@dimen/common_margin"
+        android:text="@string/personal_address_receiaok"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/personalUpdateButton"
+        style="@style/commonButton"
+        android:layout_margin="@dimen/common_margin"
+        android:text="确认修改"
+        android:visibility="gone" />
+
+</LinearLayout>

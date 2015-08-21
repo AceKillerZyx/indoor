@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <com.indoorsy.frash.common.view.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/commonText"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:padding="@dimen/common_padding"
+            android:text="@string/personal_integralrecord_details" />
+
+        <View
+            style="@style/commonGreyLineView"
+            android:layout_width="0.1dp"
+            android:layout_height="fill_parent" />
+
+        <TextView
+            style="@style/commonText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/common_padding"
+            android:text="@string/personal_integralrecord_integral" />
+
+        <View
+            style="@style/commonGreyLineView"
+            android:layout_width="0.1dp"
+            android:layout_height="fill_parent" />
+
+        <TextView
+            style="@style/commonText"
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:padding="@dimen/common_padding"
+            android:text="@string/personal_integralrecord_time" />
+    </LinearLayout>
+
+    <View style="@style/commonGreyLineView" />
+
+    <ListView
+        android:id="@+id/integralRecordListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@color/common_splitline_lightgray"
+        android:dividerHeight="0.5dp"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none" />
+
+    <include layout="@layout/common_lockup" />
+
+</LinearLayout>

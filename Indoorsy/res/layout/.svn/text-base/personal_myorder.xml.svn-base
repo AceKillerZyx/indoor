@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+
+    <com.indoorsy.frash.common.view.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/myinfo_linearlayout_solidcolor"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/personal_fragment_padding_text" >
+        <LinearLayout
+            android:id="@+id/myorderAllLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/commonText"
+                android:text="@string/personal_fragment_all"
+                android:textSize="@dimen/personal_fragment_text_size12"
+                android:textColor="@color/personal_fragment_text_color" />
+
+            <View
+                android:id="@+id/myorderAllView"
+                android:layout_width="@dimen/personal_mycollection_view_width"
+                android:layout_height="@dimen/personal_mycollection_view_height"
+                android:layout_marginTop="@dimen/personal_mycollection_view_margin_top"
+                android:background="@drawable/homepage_viewpager_item_dot_normal" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/myorderDaiFuKuanLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/commonText"
+                android:text="@string/personal_fragment_daifukuan"
+                android:textSize="@dimen/personal_fragment_text_size12"
+                android:textColor="@color/personal_fragment_text_color" />
+
+            <View
+                android:id="@+id/myorderDaiFuKuanView"
+                android:layout_width="@dimen/personal_mycollection_view_width"
+                android:layout_height="@dimen/personal_mycollection_view_height"
+                android:layout_marginTop="@dimen/personal_mycollection_view_margin_top"
+                android:background="@drawable/homepage_viewpager_item_dot_normal" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/myorderDaiFaHuoLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/commonText"
+                android:text="@string/personal_fragment_daifahuo"
+                android:textSize="@dimen/personal_fragment_text_size12"
+                android:textColor="@color/personal_fragment_text_color" />
+
+            <View
+                android:id="@+id/myorderDaiFaHuoView"
+                android:layout_width="@dimen/personal_mycollection_view_width"
+                android:layout_height="@dimen/personal_mycollection_view_height"
+                android:layout_marginTop="@dimen/personal_mycollection_view_margin_top"
+                android:background="@drawable/homepage_viewpager_item_dot_normal" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/myorderDaiShouHuoLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/commonText"
+                android:text="@string/personal_fragment_daishouhuo"
+                android:textSize="@dimen/personal_fragment_text_size12"
+                android:textColor="@color/personal_fragment_text_color" />
+
+            <View
+                android:id="@+id/myorderDaiShouHuoView"
+                android:layout_width="@dimen/personal_mycollection_view_width"
+                android:layout_height="@dimen/personal_mycollection_view_height"
+                android:layout_marginTop="@dimen/personal_mycollection_view_margin_top"
+                android:background="@drawable/homepage_viewpager_item_dot_normal" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/myorderDaiPingJiaLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/commonText"
+                android:text="@string/personal_fragment_daipingjia"
+                android:textSize="@dimen/personal_fragment_text_size12"
+                android:textColor="@color/personal_fragment_text_color" />
+
+            <View
+                android:id="@+id/myorderDaiPingJiaView"
+                android:layout_width="@dimen/personal_mycollection_view_width"
+                android:layout_height="@dimen/personal_mycollection_view_height"
+                android:layout_marginTop="@dimen/personal_mycollection_view_margin_top"
+                android:background="@drawable/homepage_viewpager_item_dot_normal" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/myorderTuiKuanJiLuLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/commonText"
+                android:text="@string/personal_fragment_tuikuanjilu"
+                android:textSize="@dimen/personal_fragment_text_size12"
+                android:textColor="@color/personal_fragment_text_color" />
+
+            <View
+                android:id="@+id/myorderTuiKuanJiLuView"
+                android:layout_width="@dimen/personal_mycollection_view_width"
+                android:layout_height="@dimen/personal_mycollection_view_height"
+                android:layout_marginTop="@dimen/personal_mycollection_view_margin_top"
+                android:background="@drawable/homepage_viewpager_item_dot_normal" />
+        </LinearLayout>
+
+    </LinearLayout>
+    
+    <View style="@style/commonGreyLineView"/>
+    
+    <ListView 
+        android:id="@+id/myorderListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+        android:divider="@color/gray"
+        android:dividerHeight="0.5dp"/>
+
+</LinearLayout>

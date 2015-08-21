@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/homepage_padding_10"
+        android:text="选择支付方式"
+        android:textColor="@color/homepage_black_text"
+        android:textSize="@dimen/homepage_textsize_16" />
+
+    <View style="@style/commonGreyLineView" />
+
+    <TextView
+        android:id="@+id/PayModeAlipayTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/homepage_padding_15"
+        android:drawableStart="@drawable/commodity_pay_mode_alipay"
+        android:gravity="center_vertical"
+        android:padding="@dimen/homepage_padding_10"
+        android:text="支付宝支付"
+        android:textColor="@color/homepage_black_text"
+        android:textSize="@dimen/homepage_textsize_14" />
+
+    <View style="@style/commonGreyLineView" />
+
+    <TextView
+        android:id="@+id/PayModeWeChatTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/homepage_padding_15"
+        android:drawableStart="@drawable/commodity_pay_mode_wechat"
+        android:gravity="center_vertical"
+        android:padding="@dimen/homepage_padding_8"
+        android:text="微信支付"
+        android:textColor="@color/homepage_black_text"
+        android:textSize="@dimen/homepage_textsize_14" />
+
+    <View style="@style/commonGreyLineView" />
+
+    <TextView
+        android:id="@+id/PayModeBankTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/homepage_padding_15"
+        android:drawableStart="@drawable/commodity_pay_mode_bank"
+        android:gravity="center_vertical"
+        android:padding="@dimen/homepage_padding_8"
+        android:text="银联支付"
+        android:textColor="@color/homepage_black_text"
+        android:textSize="@dimen/homepage_textsize_14" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="5dp" />
+
+</LinearLayout>

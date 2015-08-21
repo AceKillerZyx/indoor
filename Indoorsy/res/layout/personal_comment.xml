@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.indoorsy.frash.common.view.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/myinfo_linearlayout_solidcolor"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@android:color/darker_gray" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:id="@+id/personalGoodsNameTextView"
+                style="@style/commonText"
+                android:text="时令芒果，新鲜芒果"
+                android:textSize="@dimen/personal_fragment_text_size14" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="100块" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@color/common_title_bg"
+                android:padding="5dp"
+                android:text="@string/personal_comment"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_edit_linearlayout_height"
+        android:background="@drawable/myinfo_linearlayout_solidcolor"
+        android:gravity="center_vertical" >
+
+        <TextView
+            style="@style/commonText"
+            android:text="产品质量"
+            android:textSize="@dimen/personal_fragment_text_size12" />
+
+        <RatingBar
+            android:id="@+id/personalQualityRatingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:numStars="5"
+            android:paddingTop="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_edit_linearlayout_height"
+        android:background="@drawable/myinfo_linearlayout_solidcolor"
+        android:gravity="center_vertical" >
+
+        <TextView
+            style="@style/commonText"
+            android:text="产品数量"
+            android:textSize="@dimen/personal_fragment_text_size12" />
+
+        <RatingBar
+            android:id="@+id/personalCountRatingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:numStars="5"
+            android:paddingTop="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_edit_linearlayout_height"
+        android:background="@drawable/myinfo_linearlayout_solidcolor"
+        android:gravity="center_vertical" >
+
+        <TextView
+            style="@style/commonText"
+            android:text="发货速度"
+            android:textSize="@dimen/personal_fragment_text_size12" />
+
+        <RatingBar
+            android:id="@+id/personalSpeedRatingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:numStars="5"
+            android:paddingTop="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_edit_linearlayout_height"
+        android:background="@drawable/myinfo_linearlayout_solidcolor"
+        android:gravity="center_vertical" >
+
+        <TextView
+            style="@style/commonText"
+            android:text="服务态度"
+            android:textSize="@dimen/personal_fragment_text_size12" />
+
+        <RatingBar
+            android:id="@+id/personalServiceAttitudeRatingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:numStars="5"
+            android:paddingTop="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/common_edit_linearlayout_height"
+        android:background="@drawable/myinfo_linearlayout_solidcolor"
+        android:gravity="center_vertical" >
+
+        <EditText
+            android:id="@+id/personalCommentsEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/personal_comment_talk"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:textColorHint="@color/myinfo_grey_text"
+            android:textSize="@dimen/personal_fragment_text_size12" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/myinfo_linearlayout_solidcolor"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@android:color/darker_gray" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="5dp"
+            android:background="@android:color/darker_gray" />
+    </LinearLayout>
+
+</LinearLayout>

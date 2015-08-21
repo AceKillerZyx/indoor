@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/homepageRecipeShareItemLinearLayout"
+    android:padding="@dimen/homepage_padding_5" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/homepage_recipe_share_item_bg"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/RecipeShareItemImageView"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/commodity_firm_product_default" />
+
+        <TextView
+            android:id="@+id/RecipeShareNameTextView"
+            style="@style/commonText"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/homepage_margin_5"
+            android:ellipsize="end"
+            android:padding="@dimen/homepage_margin_1"
+            android:singleLine="true"
+            android:text="什么很号的商品"
+            android:textColor="#666666"
+            android:textSize="@dimen/homepage_textsize_14" />
+
+        <RelativeLayout
+            style="@style/commonText"
+            android:padding="@dimen/homepage_margin_1" >
+
+            <TextView
+                android:id="@+id/RecipeShareDateTextView"
+                style="@style/commonText"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:text="2015.5.22"
+                android:textColor="#666666"
+                android:textSize="@dimen/homepage_textsize_12" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/common_line_grey" />
+
+        <RelativeLayout style="@style/commonText" >
+
+            <TextView
+                android:id="@+id/RecipeShareShareTextView"
+                style="@style/commonText"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/homepage_margin_10"
+                android:drawableStart="@drawable/homepage_recipe_share_comment"
+                android:gravity="center_vertical"
+                android:textColor="#666666"
+                android:text="评论7"
+                android:textSize="@dimen/homepage_textsize_12" />
+
+            <TextView
+                android:id="@+id/RecipeShareCommentTextView"
+                style="@style/commonText"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/homepage_margin_5"
+                android:drawableStart="@drawable/homepage_product_detail_share"
+                android:gravity="center_vertical"
+                android:text="分享"
+                android:textColor="#666666"
+                android:textSize="@dimen/homepage_textsize_12" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

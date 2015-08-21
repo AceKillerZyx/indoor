@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white" >
+
+    <com.indoorsy.frash.common.view.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    
+     <include layout="@layout/common_lockup" />
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/customTitleView"
+        android:layout_marginBottom="@dimen/homepage_margin_60"
+        android:fadingEdge="vertical"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/ProductDetailViewPagerRelativeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:focusable="true"
+                android:orientation="vertical" >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/ProductDetailViewPager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/homepage_product_detail_default"
+                    android:focusable="true" />
+
+                <LinearLayout
+                    android:id="@+id/ProductDetailViewPagerLinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/homepage_padding_5" >
+
+                <TextView
+                    android:id="@+id/HomePageProductDetailNameTextView"
+                    style="@style/homepageProductDeatailTitleText"
+                    android:layout_centerVertical="true"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/HomePageProductDetailColloctionTextView"
+                    style="@style/commonText"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/homepage_product_detail_collection_normal" />
+
+                <View
+                    android:id="@+id/HomePageProductDetailSplitLineTextView"
+                    style="@style/commonGreyLineView"
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="@dimen/homepage_margin_5"
+                    android:layout_toLeftOf="@+id/HomePageProductDetailColloctionTextView" />
+
+                <TextView
+                    android:id="@+id/HomePageProductDetailShareTextView"
+                    style="@style/commonText"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/homepage_product_detail_share" />
+            </RelativeLayout>
+
+            <View style="@style/commonGreyLineView" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/homepage_padding_5" >
+
+                <TextView
+                    android:id="@+id/HomePageProductDeatailUnitTextView"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_centerVertical="true"
+                    android:text="单位" />
+
+                <TextView
+                    android:id="@+id/HomePageProductDeatailJinTextView"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_marginLeft="@dimen/homepage_margin_10"
+                    android:layout_toRightOf="@id/HomePageProductDeatailUnitTextView"
+                    android:background="@drawable/homepage_product_detail_unit_bg_press"
+                    android:text=""
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/HomePageProductDeatailFenTextView"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_marginLeft="@dimen/homepage_margin_10"
+                    android:layout_toRightOf="@id/HomePageProductDeatailJinTextView"
+                    android:background="@drawable/homepage_product_detail_unit_bg_normal"
+                    android:text="份"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/HomePageProductDeatailHeTextView"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_marginLeft="@dimen/homepage_margin_10"
+                    android:layout_toRightOf="@id/HomePageProductDeatailUnitTextView"
+                    android:background="@drawable/homepage_product_detail_unit_bg_press"
+                    android:text="盒"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/HomePageProductDeatailTiaoTextView"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_marginLeft="@dimen/homepage_margin_10"
+                    android:layout_toRightOf="@id/HomePageProductDeatailUnitTextView"
+                    android:background="@drawable/homepage_product_detail_unit_bg_press"
+                    android:text="条"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/HomePageProductDetailSumTextView"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/homepage_margin_5"
+                    android:text="库存：" />
+            </RelativeLayout>
+
+            <View style="@style/commonGreyLineView" />
+
+            <RelativeLayout
+                android:id="@+id/HomePageProductDeatailFishUnitRelativeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/homepage_padding_5"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/HomePageProductDeatailUnit2TextView"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_centerVertical="true"
+                    android:text="规格" />
+
+                <TextView
+                    android:id="@+id/HomePageProductDeatail12TextView"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_marginLeft="@dimen/homepage_margin_10"
+                    android:layout_toRightOf="@id/HomePageProductDeatailUnit2TextView"
+                    android:background="@drawable/homepage_product_detail_unit_fish_bg_press"
+                    android:text="1-2斤" />
+
+                <TextView
+                    android:id="@+id/HomePageProductDeatail23TextView"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_marginLeft="@dimen/homepage_margin_10"
+                    android:layout_toRightOf="@id/HomePageProductDeatail12TextView"
+                    android:background="@drawable/homepage_product_detail_unit_fish_bg_normal"
+                    android:text="2-3斤" />
+
+                <TextView
+                    android:id="@+id/HomePageProductDeatail34TextView"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_marginLeft="@dimen/homepage_margin_10"
+                    android:layout_toRightOf="@id/HomePageProductDeatail23TextView"
+                    android:background="@drawable/homepage_product_detail_unit_fish_bg_normal"
+                    android:text="3-4斤" />
+
+                <TextView
+                    android:id="@+id/HomePageProductDeatail5TextView"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_marginLeft="@dimen/homepage_margin_10"
+                    android:layout_toRightOf="@id/HomePageProductDeatail34TextView"
+                    android:background="@drawable/homepage_product_detail_unit_fish_bg_normal"
+                    android:text="5斤以上" />
+            </RelativeLayout>
+
+            <View style="@style/commonGreyLineView" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/homepage_padding_5" >
+
+                <TextView
+                    android:id="@+id/HomePageProductDetailMoneyText"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_centerVertical="true"
+                    android:text="价格：" />
+
+                <TextView
+                    android:id="@+id/HomePageProductDetailMoneyTextView"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/HomePageProductDetailMoneyText"
+                    android:text=""
+                    android:textColor="@color/homepage_green_money"
+                    android:textSize="@dimen/homepage_textsize_16" />
+
+                <View
+                    style="@style/commonGreyLineView"
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent" />
+            </RelativeLayout>
+
+            <View style="@style/commonGreyLineView" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/homepage_padding_5" >
+
+                <TextView
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_centerVertical="true"
+                    android:text="配送方式" />
+
+                <TextView
+                    android:id="@+id/HomePageProductDetailSendViaTextView"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/homepage_margin_5"
+                    android:text="" />
+            </RelativeLayout>
+
+            <View style="@style/commonGreyLineView" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/homepage_padding_5" >
+
+                <TextView
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_centerVertical="true"
+                    android:text="配送时间" />
+
+                <TextView
+                    android:id="@+id/HomePageProductDetailSendTimeTextView"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/homepage_margin_5"
+                    android:text="" />
+            </RelativeLayout>
+
+            <View
+                style="@style/homepageProductDeatailGrayLineView"
+                android:layout_width="fill_parent"
+                android:layout_height="5dp"
+                android:background="@color/common_splitline_lightgray" />
+
+            <TextView
+                style="@style/homepageProductDeatailTitleText"
+                android:padding="@dimen/homepage_padding_5"
+                android:text="5样商品满100免运费"
+                android:textSize="@dimen/homepage_textsize_14" />
+
+            <View style="@style/commonGreyLineView" />
+
+            <TextView
+                android:id="@+id/HomePageProductDetailProductInfoTextView"
+                style="@style/homepageProductDeatailInfoText"
+                android:padding="@dimen/homepage_padding_5"
+                android:text=""
+                android:textSize="@dimen/homepage_textsize_14" />
+
+            <ImageView
+                android:id="@+id/HomePageProductDetailProductImageImageView"
+                android:layout_width="fill_parent"
+                android:layout_height="150dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/homepage_product_detail_default" />
+
+            <View style="@style/commonGreyLineView" />
+
+            <RelativeLayout
+                android:id="@+id/HomePageProductDetailToDetailRelativeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/homepage_padding_5" >
+
+                <TextView
+                    style="@style/homepageProductDeatailTitleText"
+                    android:layout_centerVertical="true"
+                    android:text="查看图文详情" />
+
+                <TextView
+                    style="@style/homepageProductDeatailTitleText"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/homepage_margin_5"
+                    android:drawableStart="@drawable/homepage_product_detail_right_arrow" />
+            </RelativeLayout>
+
+            <View
+                style="@style/homepageProductDeatailGrayLineView"
+                android:layout_width="fill_parent"
+                android:layout_height="5dp"
+                android:background="@color/common_splitline_lightgray" />
+
+            <RelativeLayout
+                android:id="@+id/HomePageProductDetailToCommentRelativeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/homepage_padding_5" >
+
+                <TextView
+                    android:id="@+id/HomePageProductDetailProductCommentTextView"
+                    style="@style/homepageProductDeatailTitleText"
+                    android:padding="@dimen/homepage_padding_5"
+                    android:text="产品评价"
+                    android:textSize="@dimen/homepage_textsize_14" />
+
+                <TextView
+                    android:id="@+id/HomePageProductDetailCommentNumTextView"
+                    style="@style/homepageProductDeatailTitleText"
+                    android:layout_toRightOf="@id/HomePageProductDetailProductCommentTextView"
+                    android:padding="@dimen/homepage_padding_5"
+                    android:text="[ ]"
+                    android:textColor="@color/homepage_green_money"
+                    android:textSize="@dimen/homepage_textsize_14" />
+
+                <TextView
+                    style="@style/homepageProductDeatailTitleText"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/homepage_margin_5"
+                    android:drawableStart="@drawable/homepage_product_detail_right_arrow" />
+            </RelativeLayout>
+
+            <View style="@style/commonGreyLineView" />
+
+            <com.indoorsy.frash.common.view.ListViewForScrollView
+                android:id="@+id/ProductDetailCommentListView"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/common_splitline_lightgray"
+                android:dividerHeight="@dimen/homepage_margin_1"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none" >
+            </com.indoorsy.frash.common.view.ListViewForScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/homepage_margin_60"
+        android:layout_alignParentBottom="true"
+        android:background="#F8F8F8"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/homepage_padding_5" >
+
+        <TextView
+            android:id="@+id/ProductDetailRobotTextView"
+            style="@style/commonText"
+            android:layout_weight="1"
+            android:background="@color/homepage_green_money"
+            android:drawableRight="@drawable/homepage_product_detail_robot"
+            android:gravity="center"
+            android:padding="@dimen/homepage_padding_5"
+            android:text="客服"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/homepage_textsize_16" />
+
+        <TextView
+            android:id="@+id/ProductDetailShopCarTextView"
+            style="@style/commonText"
+            android:layout_marginLeft="@dimen/homepage_margin_15"
+            android:layout_marginRight="@dimen/homepage_margin_15"
+            android:layout_weight="1"
+            android:background="#E8A335"
+            android:gravity="center"
+            android:padding="@dimen/homepage_padding_5"
+            android:text="加入购物车"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/homepage_textsize_16" />
+
+        <TextView
+            android:id="@+id/ProductDetailBuyTextView"
+            style="@style/commonText"
+            android:layout_weight="1"
+            android:background="#E87435"
+            android:gravity="center"
+            android:padding="@dimen/homepage_padding_5"
+            android:text="立即购买"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/homepage_textsize_16" />
+    </LinearLayout>
+
+</RelativeLayout>

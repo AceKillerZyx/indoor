@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+
+    <com.indoorsy.frash.common.view.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/myinfo_linearlayout_solidcolor2"
+        android:gravity="center_vertical" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center" >
+
+            <com.indoorsy.frash.common.view.CircleImageView
+                android:id="@+id/myinfoHeadLogoCircleImageView"
+                android:layout_width="@dimen/personal_profile_image_width"
+                android:layout_height="@dimen/personal_profile_image_height"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/personal_header_img" />
+
+            <TextView
+                style="@style/commonText"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/personal_updatepersonal_headimg"
+                android:textColor="@color/personal_fragment_text_color"
+                android:textSize="@dimen/personal_fragment_text_size" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/myinfo_image_outside"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/myinfo_linearlayout_solidcolor2"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/personalUpdateNameTextView"
+            style="@style/commonText"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/personal_updatepersonal_nickname"
+            android:textColor="@color/personal_fragment_text_color"
+            android:textSize="@dimen/personal_fragment_text_size" />
+
+        <EditText
+            android:id="@+id/personalUpdatePersonalNameEditText"
+            style="@style/myinfoAccountManagerEditText"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/common_margin_3"
+            android:layout_toRightOf="@id/personalUpdateNameTextView" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/myinfo_linearlayout_solidcolor2"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/personalUpdatePersonalAgeTextView"
+            style="@style/commonText"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/personal_updatepersonal_age"
+            android:textColor="@color/personal_fragment_text_color"
+            android:textSize="@dimen/personal_fragment_text_size" />
+
+        <EditText
+            android:id="@+id/myinfoAccountManagerAgeEditText"
+            style="@style/myinfoAccountManagerEditText"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/common_margin_3"
+            android:layout_toRightOf="@id/personalUpdatePersonalAgeTextView"
+            android:inputType="numberDecimal"
+            android:maxLength="3" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/myinfo_linearlayout_solidcolor2"
+        android:gravity="center_vertical" >
+
+        <TextView
+            style="@style/commonText"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/personal_updatepersonal_sex"
+            android:textColor="@color/personal_fragment_text_color"
+            android:textSize="@dimen/personal_fragment_text_size" />
+
+        <Spinner
+            android:id="@+id/personalUpdatePersonalSexSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:animationCache="true"
+            android:background="@null"
+            android:drawSelectorOnTop="true"
+            android:gravity="right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/myinfo_linearlayout_solidcolor2"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/personalUpdateInvitationTextView"
+            style="@style/commonText"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/personal_updatepersonal_invitation"
+            android:textColor="@color/personal_fragment_text_color"
+            android:textSize="@dimen/personal_fragment_text_size" />
+
+        <TextView
+            android:id="@+id/personalUpdatePersonalInvitationTextView"
+            style="@style/commonText"
+            android:layout_width="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/common_margin_3"
+            android:layout_toRightOf="@id/personalUpdateInvitationTextView"
+            android:gravity="right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/personalUpdatePwdRelativateLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/myinfo_linearlayout_solidcolor2"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/personal_mymember_go" />
+
+        <TextView
+            style="@style/commonText"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/personal_updatepersonal_updatepwd"
+            android:textColor="@color/personal_fragment_text_color"
+            android:textSize="@dimen/personal_fragment_text_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/personalManageAddressRelativelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/myinfo_linearlayout_solidcolor2"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/personal_mymember_go" />
+
+        <TextView
+            style="@style/commonText"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/personal_updatepersonal_manageaddress"
+            android:textColor="@color/personal_fragment_text_color"
+            android:textSize="@dimen/personal_fragment_text_size" />
+    </RelativeLayout>
+
+</LinearLayout>

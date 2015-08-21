@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="@dimen/homepage_padding_5" >
+
+    <com.indoorsy.frash.common.view.CircleImageView
+        android:id="@+id/HomePageRecipeDetailListItemHeadCircleImageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/commodity_firm_product_default" >
+    </com.indoorsy.frash.common.view.CircleImageView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/homepage_margin_5"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/HomePageRecipeDetailListItemUserNameTextView"
+            style="@style/homepageProductDeatailTitleText"
+            android:text="扎根三"
+            android:textSize="@dimen/homepage_textsize_14" />
+
+        <TextView
+            android:id="@+id/HomePageRecipeDetailListItemUserCommentTextView"
+            style="@style/homepageProductDeatailInfoText"
+            android:layout_marginTop="@dimen/homepage_margin_5"
+            android:text="扎根阿斯蒂芬克拉斯的境况力法加点斯卡拉就废了卡死建档立卡副教授大陆  三" />
+
+        <TextView
+            android:id="@+id/HomePageRecipeDetailListItemReplyTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="回复"
+            android:textColor="#44D2C3"
+            android:textSize="@dimen/homepage_textsize_14" 
+            android:layout_marginRight="@dimen/homepage_margin_15"
+            android:visibility="gone"/>
+
+        <ListView
+            android:id="@+id/HomePageRecipeDetailListItemListView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:numColumns="3"
+            android:scrollbars="none"
+            android:listSelector="@android:color/transparent"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="@dimen/homepage_margin_5" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="@dimen/homepage_padding_5" >
+
+    <ImageView
+        android:id="@+id/mycollectionGoodsItemImageView"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/homepage_margin_5"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/mycollectionGoodsItemNameTextView"
+            style="@style/commonText"
+            android:layout_marginTop="@dimen/homepage_margin_10"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#404040"
+            android:textSize="@dimen/homepage_textsize_14" />
+
+        <TextView
+            android:id="@+id/mycollectionGoodsItemInfoTextView"
+            style="@style/commonText"
+            android:layout_marginTop="@dimen/homepage_margin_10"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/homepage_gray_text"
+            android:textSize="@dimen/homepage_textsize_12" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/homepage_margin_5" >
+
+            <TextView
+                android:id="@+id/mycollectionGoodsItemTimeTextView"
+                style="@style/commonText"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center_vertical"
+                android:textColor="#666666"
+                android:layout_alignParentBottom="true"
+                android:textSize="@dimen/homepage_textsize_12" />
+
+            <ImageView 
+                android:id="@+id/mycollectionGoodsItemDeleteImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/homepage_product_detail_collection_press"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

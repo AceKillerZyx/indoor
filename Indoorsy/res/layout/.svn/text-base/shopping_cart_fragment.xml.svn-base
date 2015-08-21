@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.indoorsy.frash.common.view.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/ShoppingCartNoneTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawablePadding="@dimen/common_margin_8"
+        android:drawableTop="@drawable/shoppingcar_none"
+        android:gravity="center"
+        android:text="购物车暂无商品\n先去逛逛"
+        android:textColor="#666666"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <include layout="@layout/common_lockup" />
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ShoppingcarBottomRelativeLayout"
+        android:layout_below="@id/customTitleView"
+        android:background="@color/common_splitline_lightgray"
+        android:fadingEdge="vertical"
+        android:scrollbars="none"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/commonText"
+                android:layout_width="fill_parent"
+                android:layout_marginLeft="@dimen/homepage_margin_15"
+                android:padding="@dimen/homepage_padding_5"
+                android:text="5种商品满100免运费"
+                android:textColor="@color/common_text"
+                android:textSize="@dimen/homepage_textsize_12" />
+
+            <com.indoorsy.frash.common.view.ListViewForScrollView
+                android:id="@+id/ShoppingCarListView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:divider="@color/common_splitline_lightgray"
+                android:dividerHeight="0.5dp"
+                android:listSelector="@android:color/transparent" >
+            </com.indoorsy.frash.common.view.ListViewForScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/ShoppingcarBottomRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="60dp"
+        android:padding="@dimen/homepage_padding_8"
+        android:background="@color/white"
+        android:visibility="gone" >
+
+        <CheckBox
+            android:id="@+id/ShoppingcarAllCheckedCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/homepage_margin_5"
+            android:button="@drawable/shopping_cart_checkbox_selector"
+            android:gravity="center_vertical"
+            android:text="全选"
+            android:textColor="@color/common_text" />
+
+        <TextView
+            android:id="@+id/ShoppingcarConfirmPayTextView"
+            style="@style/commonText"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/homepage_padding_15"
+            android:background="@color/homepage_green_money"
+            android:paddingBottom="@dimen/homepage_padding_5"
+            android:paddingLeft="@dimen/homepage_padding_15"
+            android:paddingRight="@dimen/homepage_padding_15"
+            android:paddingTop="@dimen/homepage_padding_5"
+            android:text="结算"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/homepage_textsize_16" />
+
+        <TextView
+            android:id="@+id/ShoppingcarTotalPayTextView"
+            style="@style/commonText"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="总计："
+            android:textColor="@color/homepage_green_money"
+            android:textSize="@dimen/homepage_textsize_16" />
+    </RelativeLayout>
+
+</RelativeLayout>

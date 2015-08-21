@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@android:color/transparent"
+    android:padding="@dimen/homepage_padding_5" >
+
+    <LinearLayout
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/homepage_recipe_share_item_bg"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/mycollectionRecipeItemImageView"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/mycollectionRecipeItemNameTextView"
+            style="@style/commonText"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/homepage_margin_5"
+            android:ellipsize="end"
+            android:padding="@dimen/homepage_margin_1"
+            android:singleLine="true"
+            android:textColor="#666666"
+            android:textSize="@dimen/homepage_textsize_14" />
+
+        <RelativeLayout
+            style="@style/commonText"
+            android:padding="@dimen/homepage_margin_5" >
+            <TextView
+                android:id="@+id/mycollectionRecipeItemDateTextView"
+                style="@style/commonText"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="#666666"
+                android:textSize="@dimen/homepage_textsize_12" />
+            <ImageView 
+                android:id="@+id/mycollectionRecipeItemDeleteImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/homepage_product_detail_collection_press"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

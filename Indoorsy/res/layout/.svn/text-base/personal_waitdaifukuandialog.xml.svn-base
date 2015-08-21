@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@android:color/white">
+    
+    
+        
+        <TextView 
+            android:id="@+id/personalMyOrderMessageTextView"
+            style="@style/commonText"
+            android:text="@string/personal_waitdaifukuandialog_message"
+            android:layout_centerInParent="true"
+            android:textColor="@color/personal_fragment_text_color"
+            android:textSize="@dimen/personal_fragment_text_size14"
+            />
+
+        <Button
+            android:id="@+id/personalMyOrderEvaluationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/personalMyOrderMessageTextView"
+            android:layout_below="@+id/personalMyOrderMessageTextView"
+            android:layout_marginTop="10dp"
+            android:background="@color/common_title_bg"
+            android:padding="@dimen/common_padding"
+            android:text="@string/personal_waitdaifukuandislog_ok"
+            android:textColor="@android:color/white" />
+
+</RelativeLayout>

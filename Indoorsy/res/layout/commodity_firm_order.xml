@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <com.indoorsy.frash.common.view.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </com.indoorsy.frash.common.view.CustomTitleView>
+
+    <include layout="@layout/common_lockup" />
+
+    <ScrollView
+        android:id="@+id/FirmOrderScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/customTitleView"
+        android:layout_marginBottom="60dp"
+        android:fadingEdge="vertical"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            style="@style/commonText"
+            android:layout_width="match_parent"
+            android:baselineAligned="false"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/FirmOrderChangeAddressRelativeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/homepage_padding_5" >
+
+                <TextView
+                    style="@style/homepageProductDeatailTitleText"
+                    android:layout_centerVertical="true"
+                    android:drawableStart="@drawable/commodity_firm_order_location"
+                    android:gravity="center_vertical"
+                    android:text="收货地址"
+                    android:textColor="#666666" />
+
+                <TextView
+                    style="@style/homepageProductDeatailTitleText"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/homepage_margin_5"
+                    android:drawableStart="@drawable/homepage_product_detail_right_arrow"
+                    android:textSize="@dimen/homepage_textsize_12" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/FirmOrderNamePhoneTextView"
+                style="@style/homepageProductDeatailInfoText"
+                android:layout_width="fill_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/homepage_padding_5"
+                android:text=""
+                android:textColor="@color/homepage_black_text"
+                android:textSize="@dimen/homepage_textsize_12" />
+
+            <TextView
+                android:id="@+id/FirmOrderAddressTextView"
+                style="@style/homepageProductDeatailInfoText"
+                android:layout_width="fill_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/homepage_padding_5"
+                android:text=""
+                android:textColor="@color/homepage_black_text"
+                android:textSize="@dimen/homepage_textsize_12" />
+
+            <View
+                style="@style/homepageProductDeatailGrayLineView"
+                android:layout_width="fill_parent"
+                android:layout_height="5dp"
+                android:background="@color/common_splitline_lightgray" />
+
+            <!-- 单件商品 -->
+            <LinearLayout
+                android:id="@+id/CommodityFirmOrderOneLinearLayout"
+                style="@style/commonText"
+                android:layout_width="match_parent"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:padding="@dimen/homepage_padding_5" 
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/FirmOrderProductImageView"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/homepage_padding_5"
+                    android:src="@drawable/commodity_firm_product_default" />
+
+                <LinearLayout
+                    style="@style/commonText"
+                    android:layout_width="match_parent"
+                    android:baselineAligned="false"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/FirmOrderProductNameTextView"
+                        style="@style/homepageProductDeatailTitleText"
+                        android:layout_width="fill_parent"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/homepage_padding_5"
+                        android:text=""
+                        android:textColor="@color/homepage_black_text"
+                        android:textSize="@dimen/homepage_textsize_14" />
+
+                    <TextView
+                        android:id="@+id/FirmOrderProductInfoTextView"
+                        style="@style/homepageProductDeatailInfoText"
+                        android:layout_width="fill_parent"
+                        android:layout_marginLeft="@dimen/homepage_margin_5"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="#666666"
+                        android:textSize="@dimen/homepage_textsize_12" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/homepage_padding_5" >
+
+                        <TextView
+                            android:id="@+id/FirmOrderNumSubTextView"
+                            style="@style/commonText"
+                            android:layout_width="40dp"
+                            android:background="@drawable/commodity_firm_order_num_bg"
+                            android:gravity="center"
+                            android:text="—"
+                            android:textColor="@color/homepage_green_money" />
+
+                        <TextView
+                            android:id="@+id/FirmOrderNumTextView"
+                            style="@style/commonText"
+                            android:background="@drawable/commodity_firm_order_num_bg"
+                            android:gravity="center"
+                            android:text="1" />
+
+                        <TextView
+                            android:id="@+id/FirmOrderNumAddTextView"
+                            style="@style/commonText"
+                            android:layout_width="40dp"
+                            android:background="@drawable/commodity_firm_order_num_bg"
+                            android:gravity="center"
+                            android:text="＋"
+                            android:textColor="@color/homepage_green_money" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/homepage_padding_5" >
+
+                        <TextView
+                            android:id="@+id/HomePageProductDetailMoneyText"
+                            style="@style/homepageProductDeatailInfoText"
+                            android:text="价格："
+                            android:textColor="#666666"
+                            android:textSize="@dimen/homepage_textsize_12" />
+
+                        <TextView
+                            android:id="@+id/FirmOrderProductPriceTextView"
+                            style="@style/homepageProductDeatailInfoText"
+                            android:layout_alignBaseline="@+id/HomePageProductDetailMoneyText"
+                            android:layout_alignBottom="@+id/HomePageProductDetailMoneyText"
+                            android:layout_toRightOf="@+id/HomePageProductDetailMoneyText"
+                            android:textColor="@color/homepage_green_money"
+                            android:textSize="@dimen/homepage_textsize_14" />
+
+                        <TextView
+                            android:id="@+id/FirmOrderWeightTextView"
+                            style="@style/homepageProductDeatailInfoText"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:text="数量：1"
+                            android:textColor="#666666"
+                            android:textSize="@dimen/homepage_textsize_12" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+            
+            
+            <!-- 多件商品 -->
+
+            <com.indoorsy.frash.common.view.ListViewForScrollView
+                android:id="@+id/CommodityFirmOrderMoreListView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/common_splitline_lightgray"
+                android:dividerHeight="@dimen/homepage_margin_5"
+                android:listSelector="@android:color/transparent" 
+                android:visibility="gone"/>
+
+            <View style="@style/commonGreyLineView" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/homepage_padding_8" >
+
+                <TextView
+                    style="@style/homepageProductDeatailInfoText"
+                    android:text="运费"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/homepage_textsize_14" />
+
+                <TextView
+                    android:id="@+id/FirmOrderTransPriceTextView"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/homepage_margin_15"
+                    android:text="快递："
+                    android:textColor="#666666"
+                    android:textSize="@dimen/homepage_textsize_14" />
+            </RelativeLayout>
+
+            <View style="@style/commonGreyLineView" />
+
+            <TextView
+                android:id="@+id/FirmOrderTotalPriceTextView"
+                style="@style/homepageProductDeatailInfoText"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/homepage_margin_15"
+                android:padding="@dimen/homepage_padding_5"
+                android:text="合计："
+                android:textColor="#666666"
+                android:textSize="@dimen/homepage_textsize_14" 
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/FirmOrderSizeTextView"
+                android:layout_width="fill_parent"
+                style="@style/homepageProductDeatailInfoText"
+                android:padding="@dimen/homepage_padding_5"
+                android:layout_alignParentRight="true"
+                android:text="规格："
+                android:textColor="#666666"
+                android:textSize="@dimen/homepage_textsize_14"
+                android:visibility="gone" />
+
+            <View
+                style="@style/homepageProductDeatailGrayLineView"
+                android:layout_width="fill_parent"
+                android:layout_height="5dp"
+                android:background="@color/common_splitline_lightgray" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/homepage_padding_5" >
+
+                <TextView
+                    style="@style/homepageProductDeatailInfoText"
+                    android:text="选择收货时间"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/homepage_textsize_14" />
+
+                <TextView
+                    android:id="@+id/FirmOrderDeliverTimeTextView"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/homepage_margin_15"
+                    android:text="点此选择"
+                    android:textColor="@color/common_title_bg"
+                    android:textSize="@dimen/homepage_textsize_14" />
+            </RelativeLayout>
+
+            <View
+                style="@style/homepageProductDeatailGrayLineView"
+                android:layout_width="fill_parent"
+                android:layout_height="5dp"
+                android:background="@color/common_splitline_lightgray" />
+
+            <EditText
+                android:id="@+id/FirmOrderMessageEditText"
+                style="@style/homepageProductDeatailInfoText"
+                android:layout_width="fill_parent"
+                android:background="@null"
+                android:hint="给卖家留言"
+                android:maxLines="3"
+                android:padding="@dimen/homepage_padding_10" />
+
+            <View
+                style="@style/homepageProductDeatailGrayLineView"
+                android:layout_width="fill_parent"
+                android:layout_height="5dp"
+                android:background="@color/common_splitline_lightgray" />
+
+            <RelativeLayout
+                android:id="@+id/FirmOrderPointRelativeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/homepage_padding_5" >
+
+                <TextView
+                    android:id="@+id/FirmOrderPointTextView"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="使用积分"
+                    android:textColor="#666666" />
+                
+                <TextView
+                    android:id="@+id/FirmOrderUsePointTextView"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/homepage_margin_5"
+                    android:drawableStart="@drawable/commodity_firm_order_print_normal"
+                    android:textSize="@dimen/homepage_textsize_12" />
+            </RelativeLayout>
+
+            <View style="@style/commonGreyLineView" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/homepage_padding_5" >
+
+                <TextView
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="是否打印小票"
+                    android:textColor="#666666" />
+
+                <TextView
+                    android:id="@+id/FirmOrderPrintBillTextView"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/homepage_margin_5"
+                    android:drawableStart="@drawable/commodity_firm_order_print_normal"
+                    android:textSize="@dimen/homepage_textsize_12" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:background="@color/common_splitline_lightgray"
+                android:gravity="right"
+                android:text="备注：三环以外暂不送货，如有疑问联系客服。"
+                android:textColor="#666666"
+                android:textSize="@dimen/homepage_textsize_12" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/common_splitline_lightgray"
+        android:gravity="center_vertical"
+        android:padding="@dimen/homepage_padding_8" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/homepage_padding_5"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/commonText"
+                    android:text="支付金额："
+                    android:textColor="#666666"
+                    android:textSize="@dimen/homepage_textsize_16" />
+
+                <TextView
+                    android:id="@+id/FirmOrderRealPayTextView"
+                    style="@style/commonText"
+                    android:text="0元"
+                    android:textColor="@color/homepage_green_money"
+                    android:textSize="@dimen/homepage_textsize_16" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/FirmOrderTotalPayTextView"
+                style="@style/commonText"
+                android:layout_marginTop="@dimen/homepage_padding_5"
+                android:text="@string/commodity_firm_totalpay"
+                android:textColor="#666666"
+                android:textSize="@dimen/homepage_textsize_14" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/FirmOrderConfirmPayTextView"
+            style="@style/commonText"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/homepage_padding_15"
+            android:background="@color/homepage_green_money"
+            android:paddingBottom="@dimen/homepage_padding_5"
+            android:paddingLeft="@dimen/homepage_padding_15"
+            android:paddingRight="@dimen/homepage_padding_15"
+            android:paddingTop="@dimen/homepage_padding_5"
+            android:text="付款"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/homepage_textsize_16"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/FirmOrderConfirmPayTextView2"
+            style="@style/commonText"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/homepage_padding_15"
+            android:background="@color/homepage_green_money"
+            android:paddingBottom="@dimen/homepage_padding_5"
+            android:paddingLeft="@dimen/homepage_padding_15"
+            android:paddingRight="@dimen/homepage_padding_15"
+            android:paddingTop="@dimen/homepage_padding_5"
+            android:text="付款"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/homepage_textsize_16" 
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</RelativeLayout>

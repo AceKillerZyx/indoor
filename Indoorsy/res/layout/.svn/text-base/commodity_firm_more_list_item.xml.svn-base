@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/CommodityFirmOrderMoreLinearLayout"
+        style="@style/commonText"
+        android:layout_width="match_parent"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:padding="@dimen/homepage_padding_5"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/FirmOrderProductMoreImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/homepage_padding_5"
+            android:src="@drawable/commodity_firm_product_default" />
+
+        <LinearLayout
+            style="@style/commonText"
+            android:layout_width="match_parent"
+            android:baselineAligned="false"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/FirmOrderProductMoreNameTextView"
+                style="@style/homepageProductDeatailTitleText"
+                android:layout_width="fill_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/homepage_padding_5"
+                android:text=""
+                android:textColor="@color/homepage_black_text"
+                android:textSize="@dimen/homepage_textsize_14" />
+
+            <TextView
+                android:id="@+id/FirmOrderProductMoreInfoTextView"
+                style="@style/homepageProductDeatailInfoText"
+                android:layout_width="fill_parent"
+                android:layout_marginLeft="@dimen/homepage_margin_5"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:text=""
+                android:textColor="#666666"
+                android:textSize="@dimen/homepage_textsize_12" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/homepage_padding_5" >
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/homepage_padding_5" >
+
+                <TextView
+                    android:id="@+id/HomePageProductMoreDetailMoneyText"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:text="价格："
+                    android:textColor="#666666"
+                    android:textSize="@dimen/homepage_textsize_12" />
+
+                <TextView
+                    android:id="@+id/FirmOrderProductMorePriceTextView"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_alignBaseline="@+id/HomePageProductMoreDetailMoneyText"
+                    android:layout_alignBottom="@+id/HomePageProductMoreDetailMoneyText"
+                    android:layout_toRightOf="@+id/HomePageProductMoreDetailMoneyText"
+                    android:textColor="@color/homepage_green_money"
+                    android:textSize="@dimen/homepage_textsize_14" />
+
+                <TextView
+                    android:id="@+id/FirmOrderMoreWeightTextView"
+                    style="@style/homepageProductDeatailInfoText"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:text="数量：1"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/homepage_textsize_12" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

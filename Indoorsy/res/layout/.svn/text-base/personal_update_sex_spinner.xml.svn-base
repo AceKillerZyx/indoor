@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:id="@android:id/text1"
+    android:paddingLeft="@dimen/personal_update_sex_spinner_padding5"
+    android:paddingRight="@dimen/personal_update_sex_spinner_padding5"
+    android:gravity="center_vertical|right"
+    android:singleLine="true"
+    android:textSize="@dimen/personal_fragment_text_size"
+    android:layout_width="fill_parent"
+    android:textColor="@color/personal_fragment_text_color"
+    android:layout_height="wrap_content"/>

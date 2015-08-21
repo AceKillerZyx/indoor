@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@android:color/white">
+
+    <com.indoorsy.frash.common.view.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </com.indoorsy.frash.common.view.CustomTitleView>
+
+    <ScrollView
+        android:id="@+id/RecipeDetailScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="vertical"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_splitline_lightgray"
+                android:padding="@dimen/homepage_padding_5" >
+
+                <TextView
+                    android:id="@+id/RecipeDetailNameTextView"
+                    style="@style/homepageProductDeatailTitleText"
+                    android:layout_centerVertical="true"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/RecipeDetailColloctionTextView"
+                    style="@style/commonText"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/homepage_product_detail_collection_normal" />
+
+                <View
+                    android:id="@+id/RecipeDetailSplitLineView"
+                    style="@style/commonGreyLineView"
+                    android:layout_width="0.5dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="@dimen/homepage_margin_5"
+                    android:layout_toLeftOf="@+id/RecipeDetailColloctionTextView" />
+
+                <TextView
+                    android:id="@+id/RecipeDetailShareTextView"
+                    style="@style/commonText"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/homepage_margin_10"
+                    android:layout_toLeftOf="@+id/RecipeDetailSplitLineView"
+                    android:background="@drawable/homepage_product_detail_share" />
+
+                <View
+                    android:id="@+id/RecipeDetailSplitLineView2"
+                    style="@style/commonGreyLineView"
+                    android:layout_width="0.5dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="@dimen/homepage_margin_5"
+                    android:layout_toLeftOf="@+id/RecipeDetailShareTextView" />
+
+                <TextView
+                    android:id="@+id/RecipeDetailCommentTextView"
+                    style="@style/commonText"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/homepage_margin_10"
+                    android:layout_toLeftOf="@id/RecipeDetailSplitLineView2"
+                    android:background="@drawable/homepage_recipe_share_comment" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/homepageProductDeatailTitleText"
+                android:padding="@dimen/homepage_padding_5"
+                android:text="食材"
+                android:textSize="@dimen/homepage_textsize_14" />
+
+            <View style="@style/commonGreyLineView" />
+
+            <com.indoorsy.frash.common.view.GridViewForScrollView
+                android:id="@+id/RecipeDetailMixGridView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numColumns="2"
+                android:listSelector="@android:color/transparent"
+                android:textSize="@dimen/homepage_textsize_14" />
+
+            <View
+                style="@style/homepageProductDeatailGrayLineView"
+                android:layout_width="fill_parent"
+                android:layout_height="5dp"
+                android:background="@color/common_splitline_lightgray" />
+
+            <com.indoorsy.frash.common.view.ListViewForScrollView
+                android:id="@+id/RecipeDetailImagesListView"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/common_splitline_lightgray"
+                android:dividerHeight="@dimen/homepage_margin_5"
+                android:scrollbars="none" >
+            </com.indoorsy.frash.common.view.ListViewForScrollView>
+
+            <View
+                style="@style/homepageProductDeatailGrayLineView"
+                android:layout_width="fill_parent"
+                android:layout_height="5dp"
+                android:background="@color/common_splitline_lightgray" />
+
+            <RelativeLayout
+                android:id="@+id/RecipeDetailToCommentRelativeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/homepage_padding_5" >
+
+                <TextView
+                    android:id="@+id/RecipeDetailCommentText"
+                    style="@style/homepageProductDeatailTitleText"
+                    android:padding="@dimen/homepage_padding_5"
+                    android:text="食谱评论"
+                    android:textSize="@dimen/homepage_textsize_14" />
+
+                <TextView
+                    android:id="@+id/RecipeDetailCommentNumTextView"
+                    style="@style/homepageProductDeatailTitleText"
+                    android:layout_toRightOf="@id/RecipeDetailCommentText"
+                    android:padding="@dimen/homepage_padding_5"
+                    android:text="[ 0 ]"
+                    android:textColor="@color/homepage_green_money"
+                    android:textSize="@dimen/homepage_textsize_14" />
+
+                <TextView
+                    style="@style/homepageProductDeatailTitleText"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/homepage_margin_5"
+                    android:drawableStart="@drawable/homepage_product_detail_right_arrow" />
+            </RelativeLayout>
+
+            <View style="@style/commonGreyLineView" />
+
+            <com.indoorsy.frash.common.view.ListViewForScrollView
+                android:id="@+id/RecipeDetailCommentListView"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/common_line_grey"
+                android:dividerHeight="@dimen/homepage_margin_1"
+                android:scrollbars="none" >
+            </com.indoorsy.frash.common.view.ListViewForScrollView>
+
+            <EditText
+                android:id="@+id/RecipeDetailCommentEditText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|top"
+                android:hint="对此食谱说点什么..."
+                android:lines="3"
+                android:textSize="@dimen/homepage_textsize_14" />
+
+            <TextView
+                android:id="@+id/RecipeDetailSubmitTextView"
+                style="@style/commonText"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/homepage_margin_10"
+                android:background="#44D2C3"
+                android:layout_marginBottom="@dimen/common_margin_5"
+                android:paddingBottom="@dimen/homepage_padding_5"
+                android:paddingLeft="@dimen/homepage_padding_15"
+                android:paddingRight="@dimen/homepage_padding_15"
+                android:paddingTop="@dimen/homepage_padding_5"
+                android:text="评论"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/homepage_textsize_16" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

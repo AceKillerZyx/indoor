@@ -1,0 +1,359 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+
+    <com.indoorsy.frash.common.view.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="60dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/personalHeaderRelativeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/personal_bg" >
+
+                <com.indoorsy.frash.common.view.CircleImageView
+                    android:id="@+id/personalHeaderCircleImageView"
+                    android:layout_width="@dimen/myinfo_login_image_width"
+                    android:layout_height="@dimen/myinfo_login_image_height"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/personal_header_img" />
+
+                <ImageView
+                    android:id="@+id/personalFragmentHeaderArrowImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/common_white_right_arrow"
+                    android:contentDescription="@string/app_name" />
+
+                <TextView
+                    android:id="@+id/personalFragmentLoginTextView"
+                    style="@style/commonText"
+                    android:layout_width="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toLeftOf="@id/personalFragmentHeaderArrowImageView"
+                    android:layout_toRightOf="@id/personalHeaderCircleImageView"
+                    android:text="@string/myinfo_login"
+                    android:visibility="visible"
+                    android:textColor="@android:color/white" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/personalHeaderCircleImageView"
+                    android:layout_toLeftOf="@id/personalFragmentHeaderArrowImageView"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical" 
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/commonText"
+                            android:text="@string/personal_fragment_welcome"
+                            android:textColor="@color/homepage_black_text" />
+                        <TextView
+                            android:id="@+id/personalNameTextView"
+                            style="@style/commonText"
+                            android:textColor="@color/homepage_red_seckill" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical" 
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/commonText"
+                            android:text="@string/personal_fragment_grade"
+                            android:textColor="@color/homepage_black_text" />
+                        <TextView
+                            android:id="@+id/personalGradeTextView"
+                            style="@style/commonText"
+                            android:textColor="@color/homepage_red_seckill" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical" 
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/commonText"
+                            android:text="@string/personal_fragment_integral"
+                            android:textColor="@color/homepage_black_text" />
+                        <TextView
+                            android:id="@+id/personalIntegralTextView"
+                            style="@style/commonText"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal"
+                        android:padding="8dp" >
+
+                        <TextView
+                            android:id="@+id/personalFragmentDaiFuKuanTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/personal_fragment_daifukuan"
+                            android:textColor="@color/personal_fragment_text_color" />
+
+                        <TextView
+                            android:id="@+id/personalFragmentDaiFaHuoTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/personal_fragment_daifahuo"
+                            android:textColor="@color/personal_fragment_text_color" />
+
+                        <TextView
+                            android:id="@+id/personalFragmentDaiShouHuoTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/personal_fragment_daishouhuo"
+                            android:textColor="@color/personal_fragment_text_color" />
+
+                        <TextView
+                            android:id="@+id/personalFragmentDaiPingJiaTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/personal_fragment_daipingjia"
+                            android:textColor="@color/personal_fragment_text_color" />
+
+                        <TextView
+                            android:id="@+id/personalFragmentTuiKuanJiLuTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/personal_fragment_tuikuanjilu"
+                            android:textColor="@color/personal_fragment_text_color" />
+                    </LinearLayout>
+
+                    <View style="@style/commonGreyLineView" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/personalFragmentMyOrderTextView"
+                    style="@style/commonText"
+                    android:layout_width="fill_parent"
+                    android:layout_margin="@dimen/personal_fragment_margin"
+                    android:drawableLeft="@drawable/personal_fragment_myorder"
+                    android:drawablePadding="@dimen/homepage_padding_5"
+                    android:drawableRight="@drawable/personal_mymember_go"
+                    android:gravity="center_vertical"
+                    android:text="@string/personal_fragment_myorder"
+                    android:textColor="@color/personal_fragment_text_color"
+                    android:textSize="@dimen/personal_fragment_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/personalFragmentMyMemberTextView"
+                    style="@style/commonText"
+                    android:layout_width="fill_parent"
+                    android:layout_margin="@dimen/personal_fragment_margin"
+                    android:drawableLeft="@drawable/personal_fragment_mymember"
+                    android:drawablePadding="@dimen/homepage_padding_5"
+                    android:drawableRight="@drawable/personal_mymember_go"
+                    android:gravity="center_vertical"
+                    android:text="@string/personal_fragment_mymember"
+                    android:textColor="@color/personal_fragment_text_color"
+                    android:textSize="@dimen/personal_fragment_text_size" />
+
+                <View style="@style/commonGreyLineView" />
+
+                <TextView
+                    android:id="@+id/personalFragmentMycollectTextView"
+                    style="@style/commonText"
+                    android:layout_width="fill_parent"
+                    android:layout_margin="@dimen/personal_fragment_margin"
+                    android:drawableLeft="@drawable/personal_fragment_mycollect"
+                    android:drawablePadding="@dimen/homepage_padding_5"
+                    android:drawableRight="@drawable/personal_mymember_go"
+                    android:gravity="center_vertical"
+                    android:text="@string/personal_fragment_mycollection"
+                    android:textColor="@color/personal_fragment_text_color"
+                    android:textSize="@dimen/personal_fragment_text_size" />
+
+                <View style="@style/commonGreyLineView" />
+
+                <TextView
+                    android:id="@+id/personalFragmentPayHelpTextView"
+                    style="@style/commonText"
+                    android:layout_width="fill_parent"
+                    android:layout_margin="@dimen/personal_fragment_margin"
+                    android:drawableLeft="@drawable/personal_fragment_payhelp"
+                    android:drawablePadding="@dimen/homepage_padding_5"
+                    android:drawableRight="@drawable/personal_mymember_go"
+                    android:gravity="center_vertical"
+                    android:text="@string/personal_fragment_payhelp"
+                    android:textColor="@color/personal_fragment_text_color"
+                    android:textSize="@dimen/personal_fragment_text_size" />
+
+                <View style="@style/commonGreyLineView" />
+
+                <TextView
+                    android:id="@+id/personalFragmentInviteFriendsTextView"
+                    style="@style/commonText"
+                    android:layout_width="fill_parent"
+                    android:layout_margin="@dimen/personal_fragment_margin"
+                    android:drawableLeft="@drawable/personal_fragment_invitefriends"
+                    android:drawablePadding="@dimen/homepage_padding_5"
+                    android:drawableRight="@drawable/personal_mymember_go"
+                    android:gravity="center_vertical"
+                    android:text="@string/personal_fragment_invitefriends"
+                    android:textColor="@color/personal_fragment_text_color"
+                    android:textSize="@dimen/personal_fragment_text_size" />
+
+                <View style="@style/commonGreyLineView" />
+
+                <TextView
+                    android:id="@+id/personalFragmentFeedBackTextView"
+                    style="@style/commonText"
+                    android:layout_width="fill_parent"
+                    android:layout_margin="@dimen/personal_fragment_margin"
+                    android:drawableLeft="@drawable/personal_fragment_feedback"
+                    android:drawablePadding="@dimen/homepage_padding_5"
+                    android:drawableRight="@drawable/personal_mymember_go"
+                    android:gravity="center_vertical"
+                    android:text="@string/personal_fragment_feedback"
+                    android:textColor="@color/personal_fragment_text_color"
+                    android:textSize="@dimen/personal_fragment_text_size" />
+
+                <View style="@style/commonGreyLineView" />
+
+                <TextView
+                    android:id="@+id/personalFragmentCheckUpdateTextView"
+                    style="@style/commonText"
+                    android:layout_width="fill_parent"
+                    android:layout_margin="@dimen/personal_fragment_margin"
+                    android:drawableLeft="@drawable/personal_fragment_checkupdate"
+                    android:drawablePadding="@dimen/homepage_padding_5"
+                    android:drawableRight="@drawable/personal_mymember_go"
+                    android:gravity="center_vertical"
+                    android:text="@string/personal_fragment_checkupdate"
+                    android:textColor="@color/personal_fragment_text_color"
+                    android:textSize="@dimen/personal_fragment_text_size" />
+
+                <View style="@style/commonGreyLineView" />
+
+                <TextView
+                    android:id="@+id/personalFragmentAnoutUSTextView"
+                    style="@style/commonText"
+                    android:layout_width="fill_parent"
+                    android:layout_margin="@dimen/personal_fragment_margin"
+                    android:drawableLeft="@drawable/personal_fragment_aboutus"
+                    android:drawablePadding="@dimen/homepage_padding_5"
+                    android:drawableRight="@drawable/personal_mymember_go"
+                    android:gravity="center_vertical"
+                    android:text="@string/personal_fragment_aboutus"
+                    android:textColor="@color/personal_fragment_text_color"
+                    android:textSize="@dimen/personal_fragment_text_size" />
+
+                <View style="@style/commonGreyLineView" />
+
+                <TextView
+                    android:id="@+id/personalFragmentContactTextView"
+                    style="@style/commonText"
+                    android:layout_width="fill_parent"
+                    android:layout_margin="@dimen/personal_fragment_margin"
+                    android:drawableLeft="@drawable/personal_fragment_contact"
+                    android:drawablePadding="@dimen/homepage_padding_5"
+                    android:drawableRight="@drawable/personal_mymember_go"
+                    android:gravity="center_vertical"
+                    android:text="@string/personal_fragment_contact"
+                    android:textColor="@color/personal_fragment_text_color"
+                    android:textSize="@dimen/personal_fragment_text_size" />
+
+                <View style="@style/commonGreyLineView" />
+
+                <TextView
+                    android:id="@+id/personalFragmentCleanextView"
+                    style="@style/commonText"
+                    android:layout_width="fill_parent"
+                    android:layout_margin="@dimen/personal_fragment_margin"
+                    android:drawableLeft="@drawable/personal_fragment_clean"
+                    android:drawablePadding="@dimen/homepage_padding_5"
+                    android:drawableRight="@drawable/personal_mymember_go"
+                    android:gravity="center_vertical"
+                    android:text="@string/personal_fragment_clean"
+                    android:textColor="@color/personal_fragment_text_color"
+                    android:textSize="@dimen/personal_fragment_text_size" />
+            </LinearLayout>
+
+            <include layout="@layout/common_lockup" />
+
+            <Button
+                android:id="@+id/personalFragmentLogOutButton"
+                style="@style/commonButton"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/personal_fragment_loginout"
+                android:text="@string/personal_fragment_loginout" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

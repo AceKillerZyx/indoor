@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ProductListNavTypeTextView"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/homepage_productlist_expandtab_menu_selector"
+    android:gravity="left|center_vertical"
+    android:padding="@dimen/homepage_padding_5"
+    android:textSize="@dimen/homepage_textsize_14"
+ >
+</TextView>

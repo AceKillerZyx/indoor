@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <com.indoorsy.frash.common.view.CustomTitleView
+        android:id="@+id/customTitleView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <com.indoorsy.frash.common.view.expandtab.ExpandTabView
+        android:id="@+id/homePageExpandTabView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </com.indoorsy.frash.common.view.expandtab.ExpandTabView>
+
+    <ListView
+        android:id="@+id/homePageProductListListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@color/common_splitline_lightgray"
+        android:layout_marginBottom="@dimen/common_margin_12"
+        android:dividerHeight="5dp" >
+    </ListView>
+
+    <include layout="@layout/common_lockup" />
+
+</LinearLayout>

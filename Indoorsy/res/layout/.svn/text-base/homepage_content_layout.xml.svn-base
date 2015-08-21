@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/HomePageScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="@dimen/homepage_margin_60"
+        android:fadingEdge="vertical"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            style="@style/commonText"
+            android:baselineAligned="false"
+            android:orientation="vertical" >
+
+            <View
+                android:id="@+id/ShowView"
+                style="@style/commonGreyLineView"
+                android:layout_height="0.5dp" />
+
+            <!--加载8个模块
+            <com.indoorsy.frash.common.view.GridViewForScrollView
+                    android:id="@+id/homePageMyGridView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="180dp"
+                    android:columnWidth="80dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="4"
+                    android:paddingTop="10dp"
+                    android:stretchMode="columnWidth"
+                    android:listSelector="#00000000"
+                    android:verticalSpacing="10dp" /> -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/common_margin_5"
+                android:padding="@dimen/common_margin_3" >
+
+                <LinearLayout
+                    android:id="@+id/homepageNavVegtablesLinearLayout"
+                    style="@style/commonText"
+                    android:layout_weight="1"
+                    android:background="@drawable/homepage_nav_selector"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/common_margin_3" >
+
+                    <ImageView
+                        style="@style/commonText"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/homepage_nav_vegtables2" />
+
+                    <TextView
+                        android:layout_marginTop="@dimen/common_margin_12"
+                        style="@style/commonText"
+                        android:text="蔬菜  "
+                        android:textColor="@color/homepage_nav_text"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/homepage_textsize_12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/homepageNavMeatLinearLayout"
+                    style="@style/commonText"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/common_margin_3" >
+
+                    <ImageView
+                        style="@style/commonText"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/homepage_nav_meat2" />
+
+                    <TextView
+                        style="@style/commonText"
+                        android:text="肉类  "
+                        android:textStyle="bold"
+                         android:layout_marginTop="@dimen/common_margin_12"
+                        android:textColor="@color/homepage_nav_text"
+                        android:textSize="@dimen/homepage_textsize_12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/homepageNavWaterLinearLayout"
+                    style="@style/commonText"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/common_margin_3" >
+
+                    <ImageView
+                        style="@style/commonText"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/homepage_nav_water2" />
+
+                    <TextView
+                        style="@style/commonText"
+                        android:text="水产品  "
+                        android:textStyle="bold"
+                         android:layout_marginTop="@dimen/common_margin_12"
+                        android:textColor="@color/homepage_nav_text"
+                        android:textSize="@dimen/homepage_textsize_12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/homepageNavForzenLinearLayout"
+                    style="@style/commonText"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/common_margin_3" >
+
+                    <ImageView
+                        style="@style/commonText"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/homepage_nav_frozen2" />
+
+                    <TextView
+                        style="@style/commonText"
+                        android:text="速冻烧烤"
+                         android:layout_marginTop="@dimen/common_margin_12"
+                        android:textStyle="bold"
+                        android:textColor="@color/homepage_nav_text"
+                        android:textSize="@dimen/homepage_textsize_12" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/common_margin_3" >
+
+                <LinearLayout
+                    android:id="@+id/homepageNavEggLinearLayout"
+                    style="@style/commonText"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/common_margin_3" >
+
+                    <ImageView
+                        style="@style/commonText"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/homepage_nav_egg2" />
+
+                    <TextView
+                        style="@style/commonText"
+                        android:text="蛋奶类  "
+                         android:layout_marginTop="@dimen/common_margin_12"
+                        android:textStyle="bold"
+                        android:textColor="@color/homepage_nav_text"
+                        android:textSize="@dimen/homepage_textsize_12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/homepageNavFruitLinearLayout"
+                    style="@style/commonText"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/common_margin_3" >
+
+                    <ImageView
+                        style="@style/commonText"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/homepage_nav_fruit2" />
+
+                    <TextView
+                        style="@style/commonText"
+                        android:text="水果  "
+                        android:textStyle="bold"
+                         android:layout_marginTop="@dimen/common_margin_12"
+                        android:textColor="@color/homepage_nav_text"
+                        android:textSize="@dimen/homepage_textsize_12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/homepageNavSpicesLinearLayout"
+                    style="@style/commonText"
+                    android:layout_weight="0.9"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/common_margin_3" >
+
+                    <ImageView
+                        style="@style/commonText"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/homepage_nav_spices2" />
+
+                    <TextView
+                        style="@style/commonText"
+                        android:text="调料副食"
+                        android:textStyle="bold"
+                         android:layout_marginTop="@dimen/common_margin_12"
+                        android:textColor="@color/homepage_nav_text"
+                        android:textSize="@dimen/homepage_textsize_12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/homepageNavOtherLinearLayout"
+                    style="@style/commonText"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/common_margin_3" >
+
+                    <ImageView
+                        style="@style/commonText"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/homepage_nav_other2" />
+
+                    <TextView
+                        style="@style/commonText"
+                        android:text="粮油米面"
+                        android:textStyle="bold"
+                         android:layout_marginTop="@dimen/common_margin_12"
+                        android:textColor="@color/homepage_nav_text"
+                        android:textSize="@dimen/homepage_textsize_12" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="@dimen/common_margin_12"
+                style="@style/commonGreyLineView"
+                android:background="#eeeeee"
+                android:layout_height="8dp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:focusable="true"
+                android:orientation="vertical" >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/HomePageViewPager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/homepage_product_detail_default"
+                    android:focusable="true" />
+
+                <LinearLayout
+                    android:id="@+id/HomePageViewPagerLinearLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+            </RelativeLayout>
+
+            <View
+                style="@style/commonGreyLineView"
+                 android:background="#eeeeee"
+                android:layout_height="2dp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/HomePageNewOnlineLinearLayout"
+                    style="@style/commonText"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/common_margin_5"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/cornernewonline" />
+
+                    <LinearLayout
+                        android:id="@+id/NewOnlineLinearLayout"
+                        style="@style/commonText"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/homepage_margin_5"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            style="@style/commonText"
+                            android:text="最新上线"
+                             android:paddingTop="@dimen/common_margin_8"
+                            android:textColor="@color/homepage_newonline"
+                            android:textSize="@dimen/homepage_textsize_14" />
+
+                        <TextView
+                            style="@style/commonText"
+                            android:text="新品限时购"
+                            android:layout_marginBottom="@dimen/common_margin_8"
+                            android:textColor="@color/homepage_gray_text"
+                            android:textSize="@dimen/homepage_textsize_12" />
+                    </LinearLayout>
+
+                    <com.indoorsy.frash.common.view.CircleImageView
+                        style="@style/commonText"
+                        android:layout_toRightOf="@id/NewOnlineLinearLayout"
+                        android:contentDescription="@string/app_name"
+                        android:layout_marginTop="@dimen/common_margin_8"
+                        android:layout_marginBottom="@dimen/common_margin_8"
+                        android:src="@drawable/homepage_nav_newthing" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/HomePageSeckillLinearLayout"
+                    style="@style/commonText"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/common_margin_5"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/cornerseckill" />
+
+                    <LinearLayout
+                        android:id="@+id/SeckillLinearLayout"
+                        style="@style/commonText"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/homepage_margin_5"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            style="@style/commonText"
+                            android:text="限时秒杀"
+                             android:paddingTop="@dimen/common_margin_8"
+                            android:textColor="@color/homepage_seckill"
+                            android:textSize="@dimen/homepage_textsize_14" />
+
+                        <TextView
+                            style="@style/commonText"
+                            android:text="1折限量秒杀"
+                             android:layout_marginBottom="@dimen/common_margin_8"
+                            android:textColor="@color/homepage_gray_text"
+                            android:textSize="@dimen/homepage_textsize_12" />
+                    </LinearLayout>
+
+                    <com.indoorsy.frash.common.view.CircleImageView
+                        style="@style/commonText"
+                        android:layout_marginTop="@dimen/common_margin_8"
+                        android:layout_marginBottom="@dimen/common_margin_8"
+                        android:layout_toRightOf="@id/SeckillLinearLayout"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/homepage_nav_seckill" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/HomePageRecipesLinearLayout"
+                    style="@style/commonText"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/common_margin_5"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/cornerrecipes" />
+
+                    <LinearLayout
+                        android:id="@+id/RecipesLinearLayout"
+                        style="@style/commonText"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/homepage_margin_5"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            style="@style/commonText"
+                            android:text="食谱分享"
+                               android:paddingTop="@dimen/common_margin_8"
+                            android:textColor="@color/homepage_recipes"
+                            android:textSize="@dimen/homepage_textsize_14" />
+
+                        <TextView
+                            style="@style/commonText"
+                            android:text="分享美食"
+                            android:textColor="@color/homepage_gray_text"
+                            android:layout_marginBottom="@dimen/common_margin_8"
+                            android:textSize="@dimen/homepage_textsize_12" />
+                    </LinearLayout>
+
+                    <com.indoorsy.frash.common.view.CircleImageView
+                        style="@style/commonText"
+                        android:layout_toRightOf="@id/RecipesLinearLayout"
+                         android:layout_marginTop="@dimen/common_margin_8"
+                        android:layout_marginBottom="@dimen/common_margin_8"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/homepage_nav_recipes" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                style="@style/commonGreyLineView"
+                 android:background="#eeeeee"
+                android:layout_height="8dp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#EE3863"
+                 />
+            
+            <TextView
+                android:id="@+id/SaleGoodTextView"
+                style="@style/commonText"
+                android:layout_width="78dp"
+                android:layout_height="23dp"
+                android:background="@drawable/homepage_salegood"
+                android:textColor="#777777"
+                android:textSize="@dimen/homepage_textsize_14" />
+
+            <View
+                style="@style/commonGreyLineView"
+                android:layout_height="1dp" 
+                android:visibility="gone"/>
+
+            <com.indoorsy.frash.common.view.ListViewForScrollView
+                android:id="@+id/HomePageListView"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/common_line_grey"
+                android:dividerHeight="@dimen/homepage_margin_1"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none" >
+            </com.indoorsy.frash.common.view.ListViewForScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
